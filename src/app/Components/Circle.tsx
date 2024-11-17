@@ -1,15 +1,4 @@
-import {
-    FaGithub,
-    FaJs,
-    FaLaravel,
-    FaLinkedin,
-    FaLinux,
-    FaNodeJs,
-    FaPhp,
-    FaPython,
-    FaReact,
-    FaVuejs,
-} from 'react-icons/fa'
+import { FaGithub, FaJs, FaLaravel, FaLinux, FaNodeJs, FaPhp, FaPython, FaReact, FaVuejs } from 'react-icons/fa'
 import { SiDjango } from 'react-icons/si'
 
 /**
@@ -17,7 +6,12 @@ import { SiDjango } from 'react-icons/si'
  * @param numCircles
  * @returns
  */
-export function generateCirclePositions(numCircles: number) {
+interface CirclePosition {
+    top: string
+    left: string
+}
+
+export function generateCirclePositions(numCircles: number): CirclePosition[] {
     const positions: Set<string> = new Set()
     const range = Array.from({ length: 22 }, (_, i) => 4 + i * 4)
 
@@ -27,7 +21,7 @@ export function generateCirclePositions(numCircles: number) {
         positions.add(`${top},${left}`)
     }
 
-    const result = Array.from(positions).map((position) => {
+    const result: CirclePosition[] = Array.from(positions).map((position) => {
         const [top, left] = position.split(',')
         return { top, left }
     })

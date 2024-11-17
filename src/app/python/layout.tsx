@@ -1,10 +1,20 @@
+import './python.css'
+
 import './../fonts.css'
+import Image from 'next/image'
 
 const ImageTitleComponent = () => {
     return (
         <div className="flex justify-center items-center h-full">
             <div className="flex flex-col items-center">
-                <img src="/python-logo.svg" alt="Descripción de la imagen" className="w-32 h-32 mb-4" />
+                <Image
+                    src="/python-logo.svg"
+                    alt="Descripción de la imagen"
+                    className="w-32 h-32 mb-4"
+                    width={100}
+                    height={100}
+                />
+
                 <h1 className="text-lg font-bold text-gray-800">Python</h1>
                 <p className="text-center text-sm font-light text-gray-500 mt-2">
                     Estas son mis notas de Python, espero te puedan servir.

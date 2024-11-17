@@ -4,10 +4,17 @@
         "next/typescript",
         "eslint:recommended",
         "plugin:nuxt/recommended",
-        "plugin:prettier/recommended"
+        "plugin:prettier/recommended",
+        "plugin:@typescript-eslint/recommended"
     ],
-    "plugins": ["prettier"],
+    "plugins": ["prettier", "@typescript-eslint"],
     "rules": {
         "prettier/prettier": "error"
+    },
+    "parser": "@typescript-eslint/parser",
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     }
 }

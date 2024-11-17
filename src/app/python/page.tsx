@@ -1,7 +1,3 @@
-import './python.css'
-
-import './../css/code.css'
-
 export default function Home() {
     return (
         <>
@@ -10,7 +6,7 @@ export default function Home() {
                     <div className="text-justify">
                         <h1 className="font-roboto text-center text-balance text-4xl font-semibold tracking-tight text-gray-900">
                             Camino a obtener la certificación PCEP-30-02 <br />
-                            <small className="text-lg text-gray-600 ">
+                            <small className="text-lg text-gray-600">
                                 PCEP™ – Certified Entry-Level Python Programmer
                             </small>
                         </h1>
@@ -34,9 +30,9 @@ export default function Home() {
                                 <pre>
                                     <code className="text-xs">
                                         Ejemplo <br />
-                                        Soy una Vaca "sintaticamente correcta"
+                                        Soy una Vaca &quot;sintaticamente correcta&quot;
                                         <br />
-                                        Vaca una Soy "sintaticamente incorrecta"
+                                        Vaca una Soy &quot;sintaticamente incorrecta&quot;
                                         <br />
                                     </code>
                                 </pre>
@@ -47,8 +43,8 @@ export default function Home() {
                                 <pre>
                                     <code>
                                         Ejemplo <br />
-                                        Vivo en un cassa "sintaticamente correcta" <br />
-                                        Una casa yo vivo "sintaticamente incorrecta" <br />
+                                        Vivo en un cassa &quot;sintaticamente correcta&quot; <br />
+                                        Una casa yo vivo &quot;sintaticamente incorrecta&quot; <br />
                                     </code>
                                 </pre>
                             </div>
@@ -81,7 +77,7 @@ export default function Home() {
                                     <li>Orientado a Objeto</li>
                                     <li>Con semantica dinamica</li>
                                     <li>Generalizado</li>
-                                    <li>Su nombre proviene de la serie Monty Python's Flying Circus </li>
+                                    <li>Su nombre proviene de la serie Monty Python&apos;s Flying Circus </li>
                                     <li>Desarrollador por Guido van Rossum Nacido en 1956 en Haarlem, Paises Bajos</li>
                                 </ol>
                             </div>
@@ -114,8 +110,8 @@ export default function Home() {
                                         python 2 y no tiene hya conforme a Python 3
                                     </li>
                                     <li>
-                                        PyPy y RPython: Python escrito en Rpython "Restricted Python", el cual es un
-                                        subconjunto de Python. El codigo fuente de pypy no se ejecuta de manera
+                                        PyPy y RPython: Python escrito en Rpython &quot;Restricted Python&quot;, el cual
+                                        es un subconjunto de Python. El codigo fuente de pypy no se ejecuta de manera
                                         interpretativa si no que se traduce a C y luego se ejecuta por separado.
                                         <br />
                                         Notas:
@@ -137,11 +133,14 @@ export default function Home() {
 
                             <h3 className="title"> La funcion Print </h3>
                             <div className="section">
-                                <code className="codeinline">print("Hola Mundo", " Python ", end=" ", sep=" & ")</code>
+                                <code className="codeinline">
+                                    print(&quot;Hola Mundo&quot;, &quot;Python&quot;, end=&quot; &quot;, sep=&quot; &
+                                    &quot;)
+                                </code>
                                 <p>
                                     <br />
-                                    Notas: "Hola Mundo" y "Python" son argumentos posicionales, end y sep son argumentos
-                                    de palabra clave. <br />
+                                    Notas: &quot;Hola Mundo&quot; y &quot;Python&quot; son argumentos posicionales, end
+                                    y sep son argumentos de palabra clave. <br />
                                 </p>
                             </div>
 
@@ -165,13 +164,15 @@ export default function Home() {
                                         permitido
                                     </li>
                                     <li>
-                                        Para valores octal en python agregamos <b>"0O"</b> ó <b>"0o"</b>.
+                                        Para valores octal en python agregamos <b>&quot;0O&quot;</b> ó{' '}
+                                        <b>&quot;0o&quot;</b>.
                                         <pre>
                                             <code> 0o123, 0O123</code>
                                         </pre>
                                     </li>
                                     <li>
-                                        Para valores Hexadecimales agregamos <b>"0x"</b> ó <b>"0X"</b>.
+                                        Para valores Hexadecimales agregamos <b>&quot;0x&quot;</b> ó{' '}
+                                        <b>&quot;0X&quot;</b>.
                                         <pre>
                                             <code>0x123, 0X123</code>
                                         </pre>
@@ -225,13 +226,14 @@ export default function Home() {
                                     <li>
                                         Divicion: Notas:
                                         <ul className="list-disc px-10">
-                                            <li>EN caso de division "/" el resultado siempre es flotante</li>
+                                            <li>EN caso de division &quot;/&quot; el resultado siempre es flotante</li>
                                             <li>
                                                 Si necesitas que el valor sea entero debes utilizar // y olvidar el
                                                 residuo de la operacion
                                             </li>
                                             <li>
-                                                El redondeo simpre va hacia abajo "floor division" ejemplo : <br />
+                                                El redondeo simpre va hacia abajo &quot;floor division&quot; ejemplo :{' '}
+                                                <br />
                                                 <pre>
                                                     <code>
                                                         6 / 4 = -1,5 <br />
@@ -278,7 +280,7 @@ export default function Home() {
                                 </ol>
                             </div>
 
-                            <h3 className="title"> Pep-8 "Style guide for Python code" </h3>
+                            <h3 className="title"> Pep-8 Style guide for Python code</h3>
                             <div className="section">
                                 <ol className="list-decimal list-inside">
                                     <li>
@@ -286,8 +288,8 @@ export default function Home() {
                                         por guiones bajos para mejorar la legibilidad
                                     </li>
                                     <li>
-                                        Tambien es posible usar letras mixtas "myVariable" pero soo en contextos donde
-                                        ese ya es el estilo predominante.
+                                        Tambien es posible usar letras mixtas &quot;myVariable&quot; pero soo en
+                                        contextos donde ese ya es el estilo predominante.
                                     </li>
                                 </ol>
                             </div>
@@ -311,7 +313,10 @@ export default function Home() {
                                 <pre>
                                     <code>
                                         n = 3 <br />
-                                        "James"*n <span className="text-gray-400">## JamesJamesJames </span> <br />
+                                        &quot;James&quot;*n <span className="text-gray-400">
+                                            ## JamesJamesJames{' '}
+                                        </span>{' '}
+                                        <br />
                                     </code>
                                 </pre>
                                 Notas: En caso de N sea &lt;&#61; 0 el resultado es una cadena vacia.
@@ -330,7 +335,7 @@ export default function Home() {
                             <h3 className="title">Logica de computadora </h3>
                             <div className="section">
                                 <div className="flex">
-                                    <div className="p-3 rounded border-solid border-2  mr-4 ">
+                                    <div className="p-3 rounded border-solid border-2  mr-4">
                                         <b>Conjunción</b> <br />
                                         <ul className="mt-2 text-sm">
                                             <li> 0 and 0 = 0 </li>
@@ -339,7 +344,7 @@ export default function Home() {
                                             <li> 1 and 1 = 1</li>
                                         </ul>
                                     </div>
-                                    <div className="p-3 rounded border-solid border-2  mr-4 ">
+                                    <div className="p-3 rounded border-solid border-2  mr-4">
                                         <b> Disuyción </b> <br />
                                         <ul className="mt-2 text-sm">
                                             <li> 0 and 0 = 0 </li>
@@ -489,10 +494,11 @@ export default function Home() {
                                         <pre>
                                             <code>
                                                 value &lt;&lt; bits
-                                                <span className="text-gray-400"> # Desplazamiento izquierda </span>{' '}
+                                                <span className="text-gray-400 mr-1"># Desplazamiento izquierda </span>
                                                 <br />
                                                 value &gt;&gt; bits
-                                                <span className="text-gray-400"> # Desplazamiento derecha</span> <br />
+                                                <span className="text-gray-400 mr-1"># Desplazamiento derecha</span>
+                                                <br />
                                             </code>
                                         </pre>
                                     </li>
@@ -520,7 +526,7 @@ export default function Home() {
 
                                 <ol className="list-disc mx-8 mt-3">
                                     <li>Convertir el numero a binario</li>
-                                    <li>Invertir los bits "complemento a 1"</li>
+                                    <li>Invertir los bits &quot;complemento a 1&quot;</li>
                                     <li>Sumar 1 al resultado</li>
                                 </ol>
 
@@ -599,7 +605,7 @@ export default function Home() {
 
                                 <ol className="list-disc mx-8 mt-3">
                                     <li>Convertir el número a binario</li>
-                                    <li>Invertir los bits "complemento a 1"</li>
+                                    <li>Invertir los bits &quot;complemento a 1&quot;</li>
                                     <li>Sumar 1 al resultado</li>
                                 </ol>
 
@@ -711,8 +717,8 @@ export default function Home() {
                                         secuencialmente examinados.
                                     </li>
                                     <li>
-                                        Los datos mutables pueden ser actualizados libremente en cualquier momento "in
-                                        situ".
+                                        Los datos mutables pueden ser actualizados libremente en cualquier momento
+                                        &quot;in situ&quot;.
                                     </li>
                                     <li>
                                         in situ: es una expresión en latín que se traduce literalmente como posición, en
@@ -729,8 +735,8 @@ export default function Home() {
                                     <li>Cada elemento de una tupla puede ser de distinto tipo.</li>
                                     <li>
                                         Para crear una tupla de un solo elemento{' '}
-                                        <code className="codeinline">tupla = (1,)</code> "si se omite la coma será una
-                                        variable".
+                                        <code className="codeinline">tupla = (1,)</code> &quot;si se omite la coma será
+                                        una variable&quot;.
                                     </li>
                                 </ol>
                             </div>
@@ -815,8 +821,8 @@ export default function Home() {
                                         secuencialmente examinados.
                                     </li>
                                     <li>
-                                        Los datos mutables pueden ser actualizados libremente en cualquier momento "in
-                                        situ"
+                                        Los datos mutables pueden ser actualizados libremente en cualquier momento
+                                        &quot;in situ&quot;
                                     </li>
                                     <li>
                                         in situ: es una expresion en Latim que se traduce literalmente como posicion, en
@@ -833,8 +839,8 @@ export default function Home() {
                                     <li>Cada elemento de una tupla puede ser de distinto tipo</li>
                                     <li>
                                         Para crear una tupla de un solo elemento{' '}
-                                        <code className="codeinline">tupla = (1,)</code> "si se omite la coma sera una
-                                        variable"
+                                        <code className="codeinline">tupla = (1,)</code> &quot;si se omite la coma sera
+                                        una variable&quot;
                                     </li>
                                 </ol>
                             </div>

@@ -6,7 +6,7 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint --fix"
     },
     "dependencies": {
         "next": "15.0.2",
@@ -21,6 +21,7 @@
         "eslint": "^8",
         "eslint-config-next": "15.0.2",
         "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-nuxt": "^4.0.0",
         "eslint-plugin-prettier": "^5.2.1",
         "postcss": "^8",
         "prettier": "^3.3.3",
