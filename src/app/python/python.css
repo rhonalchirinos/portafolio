@@ -1,0 +1,12 @@
+.title {
+    font-family: 'Roboto', sans-serif;
+    @apply text-balance text-xl font-semibold  pt-8 pb-4;
+}
+
+.section {
+    @apply mb-2;
+
+    p {
+        @apply mb-4;
+    }
+}

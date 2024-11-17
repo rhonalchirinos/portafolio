@@ -20,9 +20,9 @@ export default function Home() {
 
             <header className="bg-animated-gradient h-screen">
                 <div className="flex h-full flex-1 items-center justify-center">
-                    <div className="z-50 max-w-lg">
-                        <div className="flex-col-2 flex justify-between rounded-b border-b border-l border-r border-gray-400 bg-white p-4 leading-normal lg:rounded-b-none lg:rounded-r lg:border-l-0 lg:border-t lg:border-gray-400">
-                            <div className="pt-12">
+                    <div className="z-50 max-w-lg ">
+                        <div className="flex-col-2  flex justify-between rounded-b border-b border-l border-r border-gray-400 bg-white p-4 leading-normal lg:rounded-b-none lg:rounded-r lg:border-l-0 lg:border-t lg:border-gray-400">
+                            <div className="pt-12 w-32">
                                 <a
                                     href="https://github.com/rhonalchirinos/rhonalchirinos.github.io"
                                     target="_blank"
@@ -51,6 +51,10 @@ export default function Home() {
                                     problemas complejos, mejorar la infraestructura de software y contribuir al
                                     crecimiento tecnológico de las empresas.
                                 </p>
+
+                                <div className="mt-6 text-blue-700 font-bold text-sm">
+                                    <a href="/rhonalchirinos.pdf">Descarga mi curriculum aquí</a>
+                                </div>
                             </div>
                         </div>
                     </div>

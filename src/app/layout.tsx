@@ -13,7 +13,7 @@ const robotoFontBlod = localFont({
 })
 
 export const metadata: Metadata = {
-    title: 'Rhonal Dev',
+    title: 'Programando ando!!!',
     description: '........',
 }
 

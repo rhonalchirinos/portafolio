@@ -56,3 +56,7 @@ h1,
 h2 {
     @apply font-roboto-bold;
 }
+
+.font-roboto {
+    font-family: 'Roboto', sans-serif;
+}
