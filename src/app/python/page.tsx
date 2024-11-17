@@ -1,4 +1,5 @@
 import './python.css'
+
 import './../css/code.css'
 
 export default function Home() {

@@ -1,4 +1,4 @@
-import './../css/font-poppins.css'
+import './../fonts.css'
 
 const ImageTitleComponent = () => {
     return (
