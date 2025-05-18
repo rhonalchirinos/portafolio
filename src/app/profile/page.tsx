@@ -8,8 +8,6 @@ import Skills from '../Components/Skill'
  * @returns
  */
 export default function Profile() {
-
-
   return (
     <>
       <div className="flex flex-col-2 justify-between border-gray-400 bg-white ">
