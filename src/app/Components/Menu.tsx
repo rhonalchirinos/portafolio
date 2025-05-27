@@ -19,7 +19,7 @@ export default function Menu() {
           {menu.map((item) => (
             <li key={item.name} className={`py-3`}>
               <Link
-                className="block rounded-lg px-3 py-1 font-blod text-gray-500 hover:bg-gray-100 hover:text-gray-700 "
+                className="block   px-3 py-1 font-blod text-white hover:bg-white hover:text-black rounded-l-md transition-colors duration-200"
                 href={item.href}
               >
                 {item.name}
@@ -33,7 +33,7 @@ export default function Menu() {
           <Image src="/me.jpeg" className="size-10 rounded-full object-cover" alt={''} width={50} height={50} />
           <div>
             <p className="text-xs">
-              <strong className="block font-medium">Rhonal Chirinos</strong>
+              <strong className="block font-bold text-xl text-white">Rhonal Chirinos</strong>
             </p>
           </div>
         </a>

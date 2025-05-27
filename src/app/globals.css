@@ -1,78 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer utilities {
-    .bg-animated-gradient {
-        background: linear-gradient(
-            90deg,
-            rgba(26, 40, 52, 1) 0%,
-            rgba(10, 29, 43, 1) 19%,
-            rgba(6, 24, 43, 1) 53%,
-            rgba(0, 0, 1, 1) 100%
-        );
-
-        animation: gradientAnimation 15s ease infinite;
-    }
-
-    @keyframes gradientAnimation {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
-    }
-
-    .animate-float {
-        animation: float 6s ease-in-out infinite;
-    }
-
-    @keyframes float {
-        0% {
-            transform: translateY(0) rotate(0);
-        }
-        50% {
-            transform: translateY(-30px) rotate(45deg);
-        }
-        100% {
-            transform: translateY(0) rotate(0);
-        }
-    }
-}
-
-.custom-heading {
-    @apply mb-4 text-2xl font-bold text-gray-800;
-}
-
+ 
+ 
 body {
     @apply font-custom;
+ 
 }
-
-h1,
-h2 {
-    @apply font-roboto-bold;
-}
-
-.font-roboto {
-    font-family: 'Roboto', sans-serif;
-}
-
-pre {
-    @apply bg-gray-800 text-white text-sm p-4 rounded-lg shadow-md overflow-x-auto leading-relaxed my-4;
-
-    code {
-        font-size: 12px;
-    }
-}
-
-code {
-    color: #d1d5db; /* Tailwind's text-gray-300 */
-}
-
-.codeinline {
-    @apply bg-gray-700   px-2 py-1 rounded;
-}
+  
+ 
