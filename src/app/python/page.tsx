@@ -1,9 +1,9 @@
 import Image from 'next/image'
 
-export default function Home() {
+export default function Python() {
   return (
     <>
-      <div className="relative isolate px-4 pt-6">
+      <div className="px-4 pt-6">
         <div className="flex flex-col items-center">
           <Image
             src="/python-logo.svg"

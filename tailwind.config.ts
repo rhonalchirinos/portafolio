@@ -14,9 +14,9 @@ const config: Config = {
       },
       fontFamily: {
         custom: ['var(--font-roboto-normal)'],
-        sans: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-        'roboto-bold': ['var(--font-roboto-bold)'],
-        poppins: ['Poppins', 'Roboto', 'sans-serif'],
+        // sans: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+        //  'roboto-bold': ['var(--font-roboto-bold)'],
+        // poppins: ['Poppins', 'Roboto', 'sans-serif'],
       },
     },
   },
