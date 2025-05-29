@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Ubuntu_Condensed } from 'next/font/google'
-import { FaPython, FaHome, FaDocker, FaAws, FaUser, FaCubes } from 'react-icons/fa'
+import { FaPython, FaHome, FaDocker, FaAws, FaUser } from 'react-icons/fa'
 import { SiKubernetes } from 'react-icons/si'
 import { GiAtom } from 'react-icons/gi'
 
