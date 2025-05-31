@@ -7,7 +7,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa'
 export default function Profile() {
   return (
     <>
-      <div className="flex pt-64">
+      <div className="flex pt-48">
         <div className="w-5/6 items-center flex flex-col">
           <div className="mr-6"></div>
           <h1 className="font-roboto-blod mb-2 text-4xl text-gray-900">Rhonal Chirinos</h1>

@@ -16,7 +16,7 @@ export default function Home() {
 
       <div className="bg-white rounded shadow my-4 p-4">
         <Link href="docker" className="text-blue-500 hover:underline">
-          <h3 className="text-xl font-bold mb-2">Docker</h3>
+          <h3 className="text-xl font-bold bg-white mb-2">Docker</h3>
         </Link>
         <p>Docker Notes, Listado de Ejercicios </p>
       </div>

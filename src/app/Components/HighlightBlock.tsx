@@ -7,22 +7,21 @@ import 'highlight.js/styles/atom-one-dark.css'
 
 interface HighlightBlockProps {
   language?: string
-  code: string
+  children?: React.ReactNode
 }
-
-export default function HighlightBlock({ language = 'go', code }: HighlightBlockProps) {
+export default function HighlightBlock({ language = 'go', children }: HighlightBlockProps) {
   const codeRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
     if (codeRef.current) {
       hljs.highlightElement(codeRef.current)
     }
-  }, [code])
+  }, [children])
 
   return (
     <pre className="rounded overflow-x-auto">
       <code ref={codeRef} className={`language-${language}`}>
-        {code}
+        {children}
       </code>
     </pre>
   )
