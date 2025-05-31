@@ -1,26 +1,4 @@
 import Image from 'next/image'
-import HighlightBlock from '../Components/HighlightBlock'
-
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
-  return (
-    <section className="bg-white shadow p-6 rounded-lg">
-      <h3 className="text-xl font-bold mb-4 text-gray-800">{title}</h3>
-      {children}
-    </section>
-  )
-}
-
-function CodeBlock({ content }: { content: string }) {
-  return (
-    <pre className="bg-gray-100 text-sm rounded p-3 whitespace-pre-wrap">
-      <code>{content}</code>
-    </pre>
-  )
-}
-
-function CodeInline({ content }: { content: string }) {
-  return <code className="bg-gray-200 px-2 py-1 rounded text-sm">{content}</code>
-}
 
 export default function Python() {
   return (
