@@ -13,7 +13,7 @@ export default function Profile() {
           <h1 className="font-roboto-blod mb-2 text-4xl text-gray-900">Rhonal Chirinos</h1>
           <h2 className="text-gray-600 text-2xl">👨🏽‍💻 Software Developer</h2>
           <div className="my-2 text-blue-700 font-bold text-sm">
-            <a href="/rhonalchirinos.pdf">Descarga mi curriculum aquí</a>
+            <a href="/rhonalchirinos.pdf">Download my resume here</a>
           </div>
         </div>
         <div className="w-1/6 items-center flex flex-col">

@@ -22,7 +22,7 @@ const font = Ubuntu_Condensed({
 export default function Menu() {
   return (
     <div className="h-screen">
-      <nav className={`${font.className} mt-16 hidden sm:block`}>
+      <nav className={`${font.className} mt-16`}>
         <ul className="space-y-1">
           {menu.map((item) => (
             <li key={item.name} className="py-3">

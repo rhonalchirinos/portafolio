@@ -8,6 +8,13 @@ export default function Home() {
   return (
     <>
       <div className="bg-white rounded shadow my-4 p-4">
+        <Link href="/profile" className="text-blue-500 hover:underline">
+          <h3 className="text-xl font-bold mb-2">Rhonal Chirinos</h3>
+        </Link>
+        <p>My profile</p>
+      </div>
+
+      <div className="bg-white rounded shadow my-4 p-4">
         <Link href="/python" className="text-blue-500 hover:underline">
           <h3 className="text-xl font-bold mb-2">PCEP™ – Certified Entry-Level Python Programmer</h3>
         </Link>
