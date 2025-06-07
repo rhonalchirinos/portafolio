@@ -1,7 +1,5 @@
 import { Card } from '@/components/Card'
 import { home } from '@/data/data'
-import Link from 'next/link'
-import { LiaGithub } from 'react-icons/lia'
 
 /**
  *
