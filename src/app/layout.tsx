@@ -1,9 +1,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import Menu from './Components/Menu'
-import SearchNavBar from './Components/SearchNavBar'
+import Menu from '@components/Menu'
+import SearchNavBar from '@components/SearchNavBar'
 import { Poppins } from 'next/font/google'
-import MenuPhone from './Components/MenuPhone'
+import MenuPhone from '@components/MenuPhone'
 
 const font = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],

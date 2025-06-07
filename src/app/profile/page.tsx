@@ -17,7 +17,7 @@ export default function Profile() {
           </div>
         </div>
         <div className="w-1/6 items-center flex flex-col">
-          <a href="https://github.com/rhonalchirinos/rhonalchirinos.github.io" target="_blank" rel="noreferrer">
+          <a href="https://github.com/rhonalchirinos" target="_blank" rel="noreferrer">
             <FaGithub className="text-4xl text-gray-800" />
           </a>
           <br />

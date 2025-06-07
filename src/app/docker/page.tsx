@@ -1,32 +1,14 @@
-import Image from 'next/image'
+import { dockerExercises } from '@/data/data'
 import Link from 'next/link'
+import { FaDocker } from 'react-icons/fa'
 
-const exercises = [
-  {
-    title: 'Build an API on a Docker image that is less than 20 MB',
-    description:
-      'In this exercise, we aim to build a lightweight Dockerized API that weighs less than 20 MB. To achieve this, we will use a multi-stage build and Alpine Linux — a minimal base image designed for small containers. Our API will be written in Go.',
-    link: 'https://dev.to/rhonalchirinos/build-an-api-on-a-docker-image-that-is-less-than-20-mb-4ngb',
-  },
-  {
-    title: 'Configuration of volumes for MySQL, PostgreSQL and MariaDB in Docker containers',
-    description:
-      'In this exercise, we will learn how to configure volumes for MySQL, PostgreSQL, and MariaDB in Docker containers. This is essential for data persistence and management in containerized databases.',
-    link: 'https://dev.to/rhonalchirinos/configuration-of-volumes-for-mysql-postgresql-and-mariadb-in-docker-containers-4f0l',
-  },
-]
 export default function Docker() {
   return (
     <div className="bg-gray-50">
       <div className="flex flex-col items-center max-m">
-        <Image
-          src="/97_Docker_logo_logos-512.webp"
-          className="w-32 h-32 mb-4"
-          width={100}
-          height={100}
-          alt="Docker logo"
-        />
-        <h1 className="text-lg font-bold text-gray-800">Docker</h1>
+        <FaDocker className="text-8xl" />
+        <br />
+        <h1 className="text-4xl font-bold text-gray-800">DOCKER</h1>
       </div>
 
       <p className="pl-4 py-2 mt-16 text-sm font-medium text-white bg-yellow-500 rounded-md">
@@ -43,12 +25,11 @@ export default function Docker() {
 
       <div className="py-8">
         <h2 className="py-4 text-2xl font-bold">Exercises</h2>
-
-        {exercises.map((exercise, index) => (
+        {dockerExercises.map((exercise, index) => (
           <dl key={index} className="p-4 shadow rounded-md mt-3 bg-indigo-50">
             <div className="flex flex-col text-sm">
               <Link
-                href={exercise.link}
+                href={exercise.link || exercise.devto || '#'}
                 className="text-blue-500 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -58,6 +39,16 @@ export default function Docker() {
                 </dt>
               </Link>
               <p className="pt-2">{exercise.description}</p>
+              <div className="flex flex-wrap mt-2">
+                {exercise.tags?.map((tag, tagIndex) => (
+                  <span
+                    key={tagIndex}
+                    className="inline-block px-2 py-1 mr-2 mb-2 text-xs font-semibold text-gray-700 bg-gray-300 rounded-full"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </dl>
         ))}

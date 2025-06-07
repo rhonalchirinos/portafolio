@@ -1,18 +1,12 @@
-import Image from 'next/image'
+import { FaPython } from 'react-icons/fa'
 
 export default function Python() {
   return (
     <div className="bg-gray-50">
       <div className="flex flex-col items-center max-m">
-        <Image
-          src="/python-logo.svg"
-          alt="Descripción de la imagen"
-          className="w-32 h-32 mb-4"
-          width={100}
-          height={100}
-        />
-
-        <h1 className="text-lg font-bold text-gray-800">Python</h1>
+        <FaPython className="text-8xl" />
+        <br />
+        <h1 className="text-4xl font-bold text-gray-800">PYTHON</h1>
       </div>
 
       <p className="pl-4 py-2 mt-16 text-sm font-medium text-white bg-yellow-500 rounded-md">
