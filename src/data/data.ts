@@ -57,7 +57,7 @@ export const dockerExercises: DockerExercise[] = [
       {
         name: 'alpine',
         color: 'white',
-        bgColor: '#B0E0E6',
+        bgColor: '#034C53',
       },
     ],
     github: 'https://github.com/rhonalchirinos/docker/tree/master/exec01',
@@ -73,17 +73,17 @@ export const dockerExercises: DockerExercise[] = [
     tags: [
       tagDocker,
       {
-        name: 'mysql',
+        name: 'MySQL',
         color: 'white',
         bgColor: '#FF8C00',
       },
       {
-        name: 'postgresql',
+        name: 'postgreSQL',
         color: 'white',
         bgColor: '#006400',
       },
       {
-        name: 'mariadb',
+        name: 'mariaDB',
         color: 'white',
         bgColor: '#483D8B',
       },
@@ -106,17 +106,12 @@ export const home: DockerExercise[] = [
         bgColor: '#4B0082',
       },
       {
-        name: 'rhonalchirinos',
-        color: 'white',
-        bgColor: '#A0522D',
-      },
-      {
         name: 'developer',
         color: 'white',
-        bgColor: '#B0E0E6',
+        bgColor: '#222831',
       },
     ],
-    github: '',
+    github: 'https://github.com/rhonalchirinos',
   },
   {
     title: 'PCEP™ – Certified Entry-Level Python Programmer',

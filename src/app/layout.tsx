@@ -1,4 +1,4 @@
-import './globals.css'
+import '@css/globals.css'
 import type { Metadata } from 'next'
 import Menu from '@components/Menu'
 import SearchNavBar from '@components/SearchNavBar'
