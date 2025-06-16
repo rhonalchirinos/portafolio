@@ -32,6 +32,24 @@ const volumeTag: Tag = {
   bgColor: '#FF4500',
 }
 
+const postgresTag: Tag = {
+  name: 'postgres',
+  color: 'white',
+  bgColor: '#336791',
+}
+
+const mariaDBTag: Tag = {
+  name: 'mariaDB',
+  color: 'white',
+  bgColor: '#483D8B',
+}
+
+const mysqlTag: Tag = {
+  name: 'MySQL',
+  color: 'white',
+  bgColor: '#FF8C00',
+}
+
 export const dockerExercises: DockerExercise[] = [
   {
     title: 'Build an API on a Docker image that is less than 20 MB',
@@ -70,26 +88,19 @@ export const dockerExercises: DockerExercise[] = [
     `,
     target: '_blank',
     devto: 'https://dev.to/rhonalchirinos/how-to-configure-docker-volumes-for-mysql-gi6',
-    tags: [
-      tagDocker,
-      {
-        name: 'MySQL',
-        color: 'white',
-        bgColor: '#FF8C00',
-      },
-      {
-        name: 'postgreSQL',
-        color: 'white',
-        bgColor: '#006400',
-      },
-      {
-        name: 'mariaDB',
-        color: 'white',
-        bgColor: '#483D8B',
-      },
-      volumeTag,
-    ],
+    tags: [tagDocker, mysqlTag, postgresTag, mariaDBTag, volumeTag],
     github: 'https://github.com/rhonalchirinos/docker/tree/master/exec02',
+  },
+  {
+    title: 'Display a Docker Swarm cluster with 3 nodes',
+    description: `
+      In this exercise, we will set up a Docker Swarm cluster with three nodes. 
+      Docker Swarm is a native clustering and orchestration tool for Docker containers, allowing you to manage a cluster of Docker engines as a single virtual system.
+    `,
+    target: '_blank',
+    devto: 'https://dev.to/rhonalchirinos/display-a-docker-swarm-cluster-with-3-nodes-1hb3',
+    tags: [tagDocker, postgresTag],
+    github: 'https://github.com/rhonalchirinos/docker/tree/exec03',
   },
 ]
 
