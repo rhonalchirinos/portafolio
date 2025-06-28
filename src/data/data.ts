@@ -103,16 +103,16 @@ export const dockerExercises: DockerExercise[] = [
     github: 'https://github.com/rhonalchirinos/docker/tree/exec03',
   },
   {
-    title: "Configure an inverse proxy with NGINX for 3 microservices using Docker Compose and Docker Swarm",
+    title: 'Configure an inverse proxy with NGINX for 3 microservices using Docker Compose and Docker Swarm',
     description: `
       In this exercise, we will configure an inverse proxy with NGINX for 3 microservices using Docker Compose and Docker Swarm.
       HAPROXY is a web server that can be used as a reverse proxy, load balancer, and HTTP cache.
     `,
     target: '_blank',
-    devto: 'https://dev.to/rhonalchirinos/configure-an-inverse-proxy-with-nginx-for-3-microservices-using-docker-compose-and-docker-swarm-2c26',
+    devto:
+      'https://dev.to/rhonalchirinos/configure-an-inverse-proxy-with-nginx-for-3-microservices-using-docker-compose-and-docker-swarm-2c26',
     tags: [tagDocker, postgresTag],
-  }
- 
+  },
 ]
 
 export const home: DockerExercise[] = [
