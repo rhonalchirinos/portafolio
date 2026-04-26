@@ -1,7 +1,7 @@
 import '@css/globals.css'
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import Menu from '@components/Menu'
-import SearchNavBar from '@components/SearchNavBar'
 import { Poppins } from 'next/font/google'
 import MenuPhone from '@components/MenuPhone'
 
@@ -25,22 +25,28 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${font.className} bg-slate-50 antialiased`}>
-        <main className="min-h-screen flex">
-          <MenuPhone />
-          <div className="md:w-44 w-44 lg:w-64 xl:w-64 2xl::w-64 bg-indigo-950 hidden sm:block fixed h-screen left-0 top-0 z-50">
-            <Menu />
-          </div>
-          <div className="flex-grow sm:ml-64 overflow-auto">
-            <div className="max-w-7xl w-full mx-auto">
-              <div className="min-h-[calc(100vh-4rem)] mx-6">
-                <div className="flex justify-end mt-10">
-                  <SearchNavBar />
+        <main className="min-h-screen">
+          <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
+            <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 lg:px-8">
+              <Link href="/" className="flex items-center gap-3">
+                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-indigo-950 text-sm font-bold text-white">
+                  RC
                 </div>
-                <div>{children}</div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-sky-700">Portfolio</p>
+                  <p className="text-lg font-semibold text-slate-900">Rhonal Chirinos</p>
+                </div>
+              </Link>
+              <div className="relative">
+                <MenuPhone />
               </div>
+              <Menu />
             </div>
+          </header>
+
+          <div className="mx-auto max-w-7xl px-5 pb-12 pt-6 lg:px-8">
+            <div>{children}</div>
           </div>
-          <div className="w-48 hidden sm:block">Publicidad</div>
         </main>
       </body>
     </html>

@@ -1,15 +1,14 @@
 import Link from 'next/link'
 import { Ubuntu_Condensed } from 'next/font/google'
-import { FaPython, FaHome, FaDocker, FaAws, FaUser } from 'react-icons/fa'
+import { FaPython, FaHome, FaDocker, FaAws } from 'react-icons/fa'
 import { SiKubernetes } from 'react-icons/si'
 
 const menu = [
-  { name: 'HOME', href: '/', icon: <FaHome /> },
-  { name: 'PYTHON', href: '/python', icon: <FaPython /> },
-  { name: 'DOCKER', href: '/docker', icon: <FaDocker /> },
-  { name: 'KUBERNATE', href: '/kubernetes', icon: <SiKubernetes /> },
+  { name: 'Home', href: '/', icon: <FaHome /> },
+  { name: 'Python', href: '/python', icon: <FaPython /> },
+  { name: 'Docker', href: '/docker', icon: <FaDocker /> },
+  { name: 'Kubernetes', href: '/kubernetes', icon: <SiKubernetes /> },
   { name: 'AWS', href: '/aws', icon: <FaAws /> },
-  { name: 'PROFILE', href: '/profile', icon: <FaUser /> },
 ]
 
 const font = Ubuntu_Condensed({
@@ -21,22 +20,20 @@ const font = Ubuntu_Condensed({
 
 export default function Menu() {
   return (
-    <div className="h-screen">
-      <nav className={`${font.className} mt-16`}>
-        <ul className="space-y-1">
-          {menu.map((item) => (
-            <li key={item.name} className="py-3">
-              <Link
-                className="text-xl py-1 text-white font-bold hover:bg-white hover:text-black rounded-l-md transition-colors duration-200 flex items-center gap-2 justify-center text-center"
-                href={item.href}
-              >
-                {item.icon}
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </div>
+    <nav className={`${font.className} hidden items-center lg:flex`}>
+      <ul className="flex items-center gap-2">
+        {menu.map((item) => (
+          <li key={item.name}>
+            <Link
+              className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-lg font-bold text-slate-700 transition-colors duration-200 hover:bg-slate-100 hover:text-indigo-950"
+              href={item.href}
+            >
+              {item.icon}
+              {item.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
   )
 }
