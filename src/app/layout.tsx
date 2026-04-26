@@ -5,6 +5,8 @@ import Menu from '@components/Menu'
 import { Poppins } from 'next/font/google'
 import MenuPhone from '@components/MenuPhone'
 import { LanguageProvider, LanguageToggle } from '@/components/LanguageToggle'
+import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Analytics } from '@vercel/analytics/react'
 
 const font = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -50,6 +52,8 @@ export default function RootLayout({
             <div className="mx-auto max-w-7xl px-5 pb-12 pt-6 lg:px-8">{children}</div>
           </main>
         </LanguageProvider>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )
