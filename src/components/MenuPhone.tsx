@@ -3,15 +3,12 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { MdOutlineMenu } from 'react-icons/md'
-import { FaAws, FaDocker, FaHome, FaPython } from 'react-icons/fa'
-import { SiKubernetes } from 'react-icons/si'
+import { FaDocker, FaHome, FaPython } from 'react-icons/fa'
 
 const items = [
   { name: 'Home', href: '/', icon: <FaHome /> },
   { name: 'Python', href: '/python', icon: <FaPython /> },
   { name: 'Docker', href: '/docker', icon: <FaDocker /> },
-  { name: 'Kubernetes', href: '/kubernetes', icon: <SiKubernetes /> },
-  { name: 'AWS', href: '/aws', icon: <FaAws /> },
 ]
 
 export default function MenuPhone() {

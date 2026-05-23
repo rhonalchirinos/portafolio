@@ -2,9 +2,8 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaArrowRight, FaAws, FaDocker, FaGithub, FaLinkedin, FaPython } from 'react-icons/fa'
+import { FaArrowRight, FaDocker, FaGithub, FaLinkedin, FaPython } from 'react-icons/fa'
 import { FaArrowUpRightFromSquare, FaCertificate } from 'react-icons/fa6'
-import { SiKubernetes } from 'react-icons/si'
 
 import { useLanguage } from '@/components/LanguageToggle'
 import { dockerExercises } from '@/data/data'
@@ -37,6 +36,18 @@ export default function Home() {
   ]
 
   const featuredProjects = [
+    {
+      title: 'Portio',
+      description:
+        language === 'es'
+          ? 'Plataforma healthtech para seguimiento nutricional, registro de comidas, metricas corporales y analisis asistido por IA a partir de imagenes de platos.'
+          : 'Healthtech platform for nutritional tracking, meal logging, body metrics and AI-assisted analysis from dish images.',
+      href: '/proyects/portio',
+      stack: ['Healthtech', 'React', 'Python', 'AWS'],
+    },
+  ]
+
+  const projectArchive = [
     {
       title: language === 'es' ? 'API ligera en Docker' : 'Lightweight API in Docker',
       description:
@@ -99,24 +110,6 @@ export default function Home() {
           : 'Containers, images, volumes, swarm and deployment-focused practices.',
       href: '/docker',
       icon: <FaDocker className="text-2xl text-sky-600" />,
-    },
-    {
-      title: 'AWS',
-      description:
-        language === 'es'
-          ? 'Espacio para consolidar experiencia cloud y documentar servicios clave.'
-          : 'Space to consolidate cloud experience and document key services.',
-      href: '/aws',
-      icon: <FaAws className="text-2xl text-amber-500" />,
-    },
-    {
-      title: 'Kubernetes',
-      description:
-        language === 'es'
-          ? 'Ruta de aprendizaje para orquestacion, despliegues y operacion en clusters.'
-          : 'Learning path for orchestration, deployments and operation in clusters.',
-      href: '/kubernetes',
-      icon: <SiKubernetes className="text-2xl text-cyan-600" />,
     },
   ]
 
@@ -200,7 +193,7 @@ export default function Home() {
             <div className="relative w-full max-w-sm rounded-[2rem] border border-slate-200 bg-white/80 p-5 backdrop-blur">
               <div className="rounded-[1.5rem] bg-slate-200/90 p-3">
                 <Image
-                  src="/me.webp"
+                  src="/m2.jpeg"
                   alt="Rhonal Chirinos"
                   width={720}
                   height={720}
@@ -259,8 +252,87 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-8 grid gap-5 xl:grid-cols-2">
+        <div className="mt-8 grid gap-6">
           {featuredProjects.map((project) => (
+            <article
+              key={project.title}
+              className="overflow-hidden rounded-[2rem] border border-slate-200 bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 p-8 text-white shadow-xl"
+            >
+              <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-300">
+                    {language === 'es' ? 'Proyecto destacado' : 'Featured project'}
+                  </p>
+                  <h3 className="mt-3 text-3xl font-semibold md:text-4xl">{project.title}</h3>
+                  <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300">{project.description}</p>
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {project.stack.map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-100"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    <Link
+                      href={project.href || '#'}
+                      className="inline-flex items-center gap-2 rounded-full bg-sky-300 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-sky-200"
+                    >
+                      {language === 'es' ? 'Ver proyecto' : 'View project'}
+                      <FaArrowRight className="text-xs" />
+                    </Link>
+                    <Link
+                      href="https://portio.rhodeveloper.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                    >
+                      {language === 'es' ? 'Abrir aplicacion' : 'Open application'}
+                      <FaArrowUpRightFromSquare className="text-xs" />
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="grid gap-4">
+                  <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-300">Frontend</p>
+                    <p className="mt-3 text-sm leading-7 text-slate-300">
+                      React, TypeScript, Vite, TanStack Router, Zustand, Recharts, i18next, Amplify y Tailwind CSS.
+                    </p>
+                  </div>
+                  <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-300">Backend</p>
+                    <p className="mt-3 text-sm leading-7 text-slate-300">
+                      Python, AWS SAM, Lambda, API Gateway, DynamoDB, Cognito, S3 y servicios de IA para analisis
+                      asistido.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <div className="max-w-3xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-indigo-700">
+            {language === 'es' ? 'Archivo de proyectos' : 'Project archive'}
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold text-slate-900 md:text-4xl">
+            {language === 'es' ? 'Otros trabajos y publicaciones' : 'Other work and publications'}
+          </h2>
+          <p className="mt-4 text-lg leading-8 text-slate-600">
+            {language === 'es'
+              ? 'Ejercicios, publicaciones y piezas tecnicas que complementan el proyecto principal y muestran otras areas de practica.'
+              : 'Exercises, publications and technical pieces that complement the main project and show other practice areas.'}
+          </p>
+        </div>
+
+        <div className="mt-8 grid gap-5 xl:grid-cols-2">
+          {projectArchive.map((project) => (
             <article
               key={project.title}
               className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"

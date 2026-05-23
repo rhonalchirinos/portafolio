@@ -1,14 +1,11 @@
 import Link from 'next/link'
 import { Ubuntu_Condensed } from 'next/font/google'
-import { FaPython, FaHome, FaDocker, FaAws } from 'react-icons/fa'
-import { SiKubernetes } from 'react-icons/si'
+import { FaPython, FaHome, FaDocker } from 'react-icons/fa'
 
 const menu = [
   { name: 'Home', href: '/', icon: <FaHome /> },
   { name: 'Python', href: '/python', icon: <FaPython /> },
   { name: 'Docker', href: '/docker', icon: <FaDocker /> },
-  { name: 'Kubernetes', href: '/kubernetes', icon: <SiKubernetes /> },
-  { name: 'AWS', href: '/aws', icon: <FaAws /> },
 ]
 
 const font = Ubuntu_Condensed({
