@@ -4,24 +4,43 @@ type Highlight = {
 }
 
 type PortioBusinessSectionProps = {
+  businessSectionLabel: string
+  businessSectionTitle: string
+  businessSectionDescription: string
   productHighlights: Highlight[]
   functionalFlow: string[]
+  valueLabel: string
+  operationLabel: string
+  operationTitle: string
+  operationDescription: string
+  impactLabel: string
+  impactTitle: string
+  impactParagraphs: string[]
 }
 
 export function PortioBusinessSection({
+  businessSectionLabel,
+  businessSectionTitle,
+  businessSectionDescription,
   productHighlights,
   functionalFlow,
+  valueLabel,
+  operationLabel,
+  operationTitle,
+  operationDescription,
+  impactLabel,
+  impactTitle,
+  impactParagraphs,
 }: PortioBusinessSectionProps) {
   return (
     <section className="relative mt-10">
       <div className="max-w-3xl">
         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[color:var(--portio-accent)]">
-          Seccion negocio
+          {businessSectionLabel}
         </p>
-        <h2 className="mt-3 text-4xl font-semibold text-[color:var(--portio-primary)]">Portio para el negocio</h2>
+        <h2 className="mt-3 text-4xl font-semibold text-[color:var(--portio-primary)]">{businessSectionTitle}</h2>
         <p className="mt-4 text-base leading-8 text-[color:var(--portio-text-muted)]">
-          Esta parte explica que resuelve la aplicacion, como aporta valor al seguimiento nutricional y de que forma
-          mejora la relacion entre paciente, informacion diaria y criterio profesional.
+          {businessSectionDescription}
         </p>
       </div>
 
@@ -32,7 +51,7 @@ export function PortioBusinessSection({
             className="rounded-[2rem] border border-[color:var(--portio-primary)]/10 bg-[color:var(--portio-surface)] p-8 shadow-[0_14px_34px_rgba(20,48,74,0.06)]"
           >
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[color:var(--portio-accent)]">
-              Valor
+              {valueLabel}
             </p>
             <h2 className="mt-3 text-2xl font-semibold text-[color:var(--portio-primary)]">{item.title}</h2>
             <p className="mt-4 text-base leading-8 text-[color:var(--portio-text-muted)]">{item.description}</p>
@@ -43,13 +62,11 @@ export function PortioBusinessSection({
       <div className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <article className="rounded-[2rem] border border-[color:var(--portio-primary)]/10 bg-[color:var(--portio-surface)] p-8 shadow-[0_14px_34px_rgba(20,48,74,0.06)]">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[color:var(--portio-secondary)]">
-            Operacion
+            {operationLabel}
           </p>
-          <h2 className="mt-3 text-3xl font-semibold text-[color:var(--portio-primary)]">Como funciona la app</h2>
+          <h2 className="mt-3 text-3xl font-semibold text-[color:var(--portio-primary)]">{operationTitle}</h2>
           <p className="mt-4 text-base leading-8 text-[color:var(--portio-text-muted)]">
-            El flujo del producto se entiende mejor como una secuencia de seguimiento: la persona registra sus comidas,
-            la plataforma ordena ese historial, detecta patrones y genera sugerencias, y el nutricionista accede a esa
-            informacion para evaluar el caso con mas contexto y definir la mejor decision para cada paciente.
+            {operationDescription}
           </p>
           <div className="mt-6 grid gap-3">
             {functionalFlow.map((item, index) => (
@@ -68,22 +85,13 @@ export function PortioBusinessSection({
 
         <article className="rounded-[2rem] border border-[color:var(--portio-light)] bg-[linear-gradient(135deg,var(--portio-light-soft),var(--portio-surface),var(--portio-hero-gradient-end))] p-8 shadow-[0_16px_36px_rgba(20,48,74,0.06)]">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[color:var(--portio-accent)]">
-            Impacto
+            {impactLabel}
           </p>
-          <h2 className="mt-3 text-3xl font-semibold text-[color:var(--portio-primary)]">Que habilita Portio</h2>
+          <h2 className="mt-3 text-3xl font-semibold text-[color:var(--portio-primary)]">{impactTitle}</h2>
           <div className="mt-4 space-y-4 text-base leading-8 text-[color:var(--portio-text-muted)]">
-            <p>
-              Portio transforma datos diarios en informacion util para seguimiento nutricional, evitando que el
-              control del paciente dependa de registros dispersos o memoria parcial.
-            </p>
-            <p>
-              La app permite ver habitos, frecuencia, porciones y evolucion en un solo lugar, lo que mejora la calidad
-              del seguimiento y hace mas clara la conversacion entre usuario y profesional.
-            </p>
-            <p>
-              Para el negocio, esto posiciona a Portio como una herramienta de apoyo real al proceso nutricional y no
-              solo como una interfaz para cargar comidas.
-            </p>
+            {impactParagraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
           </div>
         </article>
       </div>

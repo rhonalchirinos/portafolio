@@ -117,25 +117,6 @@ export const dockerExercises: DockerExercise[] = [
 
 export const home: DockerExercise[] = [
   {
-    title: 'Profile',
-    description: 'My profile',
-    link: '/profile',
-    target: '_self',
-    tags: [
-      {
-        name: 'profile',
-        color: 'white',
-        bgColor: '#4B0082',
-      },
-      {
-        name: 'developer',
-        color: 'white',
-        bgColor: '#222831',
-      },
-    ],
-    github: 'https://github.com/rhonalchirinos',
-  },
-  {
     title: 'PCEP™ – Certified Entry-Level Python Programmer',
     description: 'Notas de pyhthon para el examen PCEP™ – Certified Entry-Level Python Programmer.',
     link: '/python',

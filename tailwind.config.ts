@@ -13,7 +13,9 @@ const config: Config = {
         foreground: 'var(--foreground)',
       },
       fontFamily: {
-        custom: ['var(--font-roboto-normal)'],
+        custom: ['var(--font-inter)', 'var(--font-ibm-plex-sans)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-inter)', 'var(--font-ibm-plex-sans)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-jetbrains-mono)', 'var(--font-fira-code)', 'monospace'],
       },
     },
   },

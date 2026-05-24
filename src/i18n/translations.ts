@@ -3,7 +3,7 @@ export const translations = {
     portfolio: 'Portafolio y diario técnico',
     focus: 'Enfoque',
     approach: 'Enfoque',
-    backend: 'Backend, contenedores, automatización y aprendizaje applied.',
+    backend: 'Backend, contenedores, automatización y aprendizaje aplicado.',
     practice: 'Práctica técnica, documentación clara y soluciones orientadas a implementación.',
     capabilities: 'Capacidades',
     projects: 'Proyectos destacados',
@@ -42,7 +42,7 @@ export const translations = {
     capabilities: 'Capabilities',
     projects: 'Featured projects',
     projectDescription:
-      'A selection of exercises and technical work that reflect my way of building, documenting and solving problems.',
+      'A selection of exercises and technical work that reflects how I build, document, and solve problems.',
     howIWork: 'How I work',
     howWorkDescription:
       'I am interested in building clear, maintainable software close to real scenarios. I use this site to showcase projects, document learnings and convert technical practice into visible evidence.',
@@ -53,11 +53,11 @@ export const translations = {
     certificationsDescription:
       'I also document my professional progress through certifications and badges. I use Credly to centralize verifiable credentials and make the evolution of my technical profile visible.',
     professionalSignal: 'Professional signal',
-    formationVisible: 'Visible formation, verifiable work',
+    formationVisible: 'Visible learning, verifiable work',
     formationDescription:
-      'The goal is not just to list technologies, but to show evidence. Thats why the site now connects projects, technical notes and credentials in the same journey: what I study, what I build and what I can demonstrate.',
+      'The goal is not just to list technologies, but to show evidence. That is why the site now connects projects, technical notes, and credentials in the same journey: what I study, what I build, and what I can demonstrate.',
     nextStep: 'Next step',
-    continueConversation: 'Lets keep the conversation',
+    continueConversation: "Let's keep the conversation going",
     continueConversationDescription:
       'If you want to see more details about my experience, my projects or my way of working, you can check my profile, explore my repositories or download my CV.',
     viewProjects: 'View projects',
