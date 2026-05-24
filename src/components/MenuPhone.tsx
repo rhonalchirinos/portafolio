@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { MdOutlineMenu } from 'react-icons/md'
-import { FaDocker, FaHome, FaPython } from 'react-icons/fa'
+import { FaDocker, FaFolderOpen, FaHome, FaPython } from 'react-icons/fa'
 import { useLanguage } from '@/components/LanguageToggle'
 
 export default function MenuPhone() {
@@ -12,6 +12,7 @@ export default function MenuPhone() {
 
   const items = [
     { name: language === 'es' ? 'Inicio' : 'Home', href: '/', icon: <FaHome /> },
+    { name: language === 'es' ? 'Proyectos' : 'Projects', href: '/#projects', icon: <FaFolderOpen /> },
     { name: 'Python', href: '/python', icon: <FaPython /> },
     { name: 'Docker', href: '/docker', icon: <FaDocker /> },
   ]

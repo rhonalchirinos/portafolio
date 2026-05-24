@@ -45,7 +45,9 @@ export default function Home() {
     boxShadow: isDark ? '0 24px 60px -24px rgba(20, 48, 74, 0.45)' : '0 24px 60px -28px rgba(79, 70, 229, 0.18)',
   }
   const featuredAccentColor = isDark ? 'var(--portio-accent)' : '#7c3aed'
-  const featuredTitleClassName = isDark ? 'mt-3 text-3xl font-semibold md:text-4xl' : 'mt-3 text-3xl font-semibold text-slate-900 md:text-4xl'
+  const featuredTitleClassName = isDark
+    ? 'mt-3 text-3xl font-semibold text-[color:var(--portio-primary)] md:text-4xl'
+    : 'mt-3 text-3xl font-semibold text-slate-900 md:text-4xl'
   const featuredBodyColor = isDark ? 'var(--portio-light)' : '#475569'
   const featuredBadgeStyle = {
     borderColor: isDark ? 'rgba(255, 231, 199, 0.18)' : 'rgba(124, 58, 237, 0.14)',
@@ -55,12 +57,18 @@ export default function Home() {
   const featuredSecondaryButtonStyle = {
     borderColor: isDark ? 'rgba(255, 231, 199, 0.2)' : 'rgba(99, 102, 241, 0.16)',
     backgroundColor: isDark ? 'rgba(255, 253, 248, 0.06)' : 'rgba(255, 255, 255, 0.72)',
-    color: isDark ? 'var(--portio-surface)' : '#312e81',
+    color: isDark ? '#ffffff' : '#312e81',
   }
   const featuredPanelStyle = {
     borderColor: isDark ? 'rgba(255, 231, 199, 0.16)' : 'rgba(99, 102, 241, 0.14)',
     backgroundColor: isDark ? 'rgba(255, 253, 248, 0.08)' : 'rgba(255, 255, 255, 0.68)',
   }
+  const certificationsCardClassName = isDark
+    ? 'rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm'
+    : 'rounded-[2rem] border border-slate-200 bg-gradient-to-br from-sky-50 via-white to-indigo-50 p-8 shadow-sm'
+  const certificationsItemClassName = isDark
+    ? 'rounded-2xl border border-slate-200 bg-slate-50 p-4 transition hover:border-sky-300 hover:bg-slate-50'
+    : 'rounded-2xl border border-slate-200 bg-white/80 p-4 transition hover:border-sky-300 hover:bg-white'
 
   const capabilities = [
     {
@@ -390,6 +398,7 @@ export default function Home() {
               language === 'es' ? 'CI/CD y despliegue automatizado' : 'CI/CD and automated deployment',
               language === 'es' ? 'Observabilidad y trazabilidad' : 'Observability and traceability',
               language === 'es' ? 'Cloud compute y servicios administrados' : 'Cloud compute and managed services',
+              language === 'es' ? 'Uso de servicios como colas e IA' : 'Using services such as queues and AI',
             ].map((item) => (
               <div key={item} className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-4">
                 <p className="text-sm leading-7 text-slate-600">{item}</p>
@@ -502,7 +511,7 @@ export default function Home() {
       </section>
 
       <section className="mt-16 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-        <article className="rounded-[2rem] border border-slate-200 bg-gradient-to-br from-sky-50 via-white to-indigo-50 p-8 shadow-sm">
+        <article className={certificationsCardClassName}>
           <div className="flex items-center gap-3">
             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-950 text-white">
               <FaCertificate className="text-xl" />
@@ -521,7 +530,7 @@ export default function Home() {
               href="https://www.credly.com/badges/f78ce3c3-6a5b-499c-b9fb-790002032c95"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-2xl border border-slate-200 bg-white/80 p-4 transition hover:border-sky-300 hover:bg-white"
+              className={certificationsItemClassName}
             >
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
                 {language === 'es' ? 'Credencial 01' : 'Credential 01'}
@@ -539,7 +548,7 @@ export default function Home() {
               href="https://www.credly.com/badges/cdeaf800-c8c5-489e-bad0-6bec8b9383fd"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-2xl border border-slate-200 bg-white/80 p-4 transition hover:border-sky-300 hover:bg-white"
+              className={certificationsItemClassName}
             >
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
                 {language === 'es' ? 'Credencial 02' : 'Credential 02'}

@@ -17,6 +17,8 @@ export const portioDarkThemeStyle: CSSProperties = {
   ['--portio-white-glass' as string]: 'rgba(255, 255, 255, 0.08)',
   ['--portio-hero-gradient-start' as string]: '#0d1f24',
   ['--portio-hero-gradient-end' as string]: '#13303b',
+  ['--portio-architecture-gradient-start' as string]: '#17354a',
+  ['--portio-architecture-gradient-end' as string]: '#6d8fa8',
 }
 
 export const portioLightThemeStyle: CSSProperties = {
@@ -36,4 +38,6 @@ export const portioLightThemeStyle: CSSProperties = {
   ['--portio-white-glass' as string]: 'rgba(255, 255, 255, 0.08)',
   ['--portio-hero-gradient-start' as string]: '#ffffff',
   ['--portio-hero-gradient-end' as string]: '#e9f7f4',
+  ['--portio-architecture-gradient-start' as string]: '#16354d',
+  ['--portio-architecture-gradient-end' as string]: '#bdd8ea',
 }

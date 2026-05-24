@@ -118,7 +118,7 @@ export const dockerExercises: DockerExercise[] = [
 export const home: DockerExercise[] = [
   {
     title: 'PCEP™ – Certified Entry-Level Python Programmer',
-    description: 'Notas de pyhthon para el examen PCEP™ – Certified Entry-Level Python Programmer.',
+    description: 'Notas de Python para el examen PCEP™ – Certified Entry-Level Python Programmer.',
     link: '/python',
     target: '_self',
     tags: [pythonTag],

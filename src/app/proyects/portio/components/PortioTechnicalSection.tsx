@@ -56,7 +56,7 @@ export function PortioTechnicalSection({
       </div>
 
       <div className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-        <article className="rounded-[2rem] border border-[color:var(--portio-primary)]/10 bg-[linear-gradient(160deg,var(--portio-dark),var(--portio-primary))] p-8 text-white shadow-[0_18px_42px_rgba(8,27,41,0.26)]">
+        <article className="rounded-[2rem] border border-[color:var(--portio-primary)]/10 bg-[linear-gradient(160deg,var(--portio-architecture-gradient-start),var(--portio-architecture-gradient-end))] p-8 text-white shadow-[0_18px_42px_rgba(8,27,41,0.26)]">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[color:var(--portio-accent)]">
             {architectureLabel}
           </p>
