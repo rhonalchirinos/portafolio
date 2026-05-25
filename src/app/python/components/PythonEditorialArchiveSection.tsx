@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { FaArrowRight } from 'react-icons/fa'
 
+import { BaseSection } from '@/components/sections/BaseSection'
 import type { Language } from '@/i18n/translations'
 import type { PythonPublication } from '@/modules/python/domain/python-publication'
 
@@ -11,12 +12,12 @@ type PythonEditorialArchiveSectionProps = {
 
 export function PythonEditorialArchiveSection({ language, publications }: PythonEditorialArchiveSectionProps) {
   return (
-    <section className="mt-8 rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+    <BaseSection className="mt-8">
       <div className="max-w-3xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-indigo-700">
+        <p className="section-kicker text-sm font-semibold uppercase tracking-[0.25em]">
           {language === 'es' ? 'Publicaciones' : 'Publications'}
         </p>
-        <h2 className="mt-3 text-3xl font-semibold text-slate-900 md:text-4xl">
+        <h2 className="section-title mt-3 text-3xl font-semibold md:text-4xl">
           {language === 'es' ? 'Archivo editorial de Python' : 'Python editorial archive'}
         </h2>
       </div>
@@ -25,17 +26,17 @@ export function PythonEditorialArchiveSection({ language, publications }: Python
         {publications.map((publication) => (
           <article
             key={publication.slug}
-            className="flex h-full flex-col rounded-[1.75rem] border border-slate-200 bg-slate-50 p-6"
+            className="section-panel flex h-full flex-col rounded-[1.75rem] p-6"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">{publication.badge}</p>
-            <h3 className="mt-3 text-2xl font-semibold text-slate-900">{publication.title}</h3>
-            <p className="mt-3 text-sm leading-7 text-slate-600">{publication.excerpt}</p>
+            <p className="section-muted text-xs font-semibold uppercase tracking-[0.2em]">{publication.badge}</p>
+            <h3 className="section-title mt-3 text-2xl font-semibold">{publication.title}</h3>
+            <p className="section-text mt-3 text-sm leading-7">{publication.excerpt}</p>
 
             <div className="mt-5 flex flex-wrap gap-2">
               {publication.topics.map((topic) => (
                 <span
                   key={topic}
-                  className="rounded-full border border-slate-200 bg-white px-3 py-1 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-slate-500"
+                  className="section-tag section-tag-plain rounded-full px-3 py-1 font-mono text-xs font-semibold uppercase tracking-[0.2em]"
                 >
                   {topic}
                 </span>
@@ -54,6 +55,6 @@ export function PythonEditorialArchiveSection({ language, publications }: Python
           </article>
         ))}
       </div>
-    </section>
+    </BaseSection>
   )
 }

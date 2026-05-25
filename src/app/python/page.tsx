@@ -15,7 +15,7 @@ export default function PythonPage() {
   const localizedPublications = localizePythonPublications(publications, language)
 
   return (
-    <div className="portfolio-theme pb-20">
+    <div className="section-theme pb-20">
       <PythonHeroSection language={language} />
 
       <PythonEditorialArchiveSection language={language} publications={localizedPublications} />

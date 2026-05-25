@@ -15,10 +15,7 @@ export default function PortioPage() {
   const content = getPortioPageContent(language)
 
   return (
-    <div
-      style={portioThemeStyle}
-      className="relative overflow-hidden rounded-[2.25rem] bg-[color:var(--portio-background)] px-4 pb-20 pt-4 text-[color:var(--portio-text)] shadow-[0_24px_80px_rgba(20,48,74,0.08)] md:px-6"
-    >
+    <div style={portioThemeStyle}>
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-[-5%] top-8 h-56 w-56 rounded-full bg-[color:var(--portio-surface-soft)] blur-3xl" />
         <div className="absolute right-0 top-28 h-72 w-72 rounded-full bg-[color:var(--portio-surface-tint)] blur-3xl" />

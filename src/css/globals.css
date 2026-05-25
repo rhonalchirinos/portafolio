@@ -180,6 +180,79 @@ samp,
   background: rgba(255, 255, 255, 0.07);
 }
 
+.section-theme {
+  color: var(--app-text);
+}
+
+.section-card {
+  border: 1px solid var(--app-border);
+  background: var(--app-surface);
+  border-radius: 2rem;
+  box-shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
+}
+
+.section-card-soft {
+  background: var(--app-surface-soft);
+}
+
+.section-card-hero {
+  background: linear-gradient(135deg, var(--app-surface-strong), var(--app-surface), var(--app-accent-strong));
+}
+
+.section-card-gradient {
+  background: linear-gradient(90deg, var(--app-surface-strong), var(--app-accent-strong));
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 9999px;
+  background: var(--app-accent-strong);
+  color: var(--app-accent);
+}
+
+.section-kicker {
+  color: var(--app-accent);
+}
+
+.section-title {
+  color: var(--app-text);
+}
+
+.section-text {
+  color: var(--app-text-muted);
+}
+
+.section-muted {
+  color: var(--app-text-soft);
+}
+
+.section-tag {
+  border: 1px solid var(--app-border);
+  background: var(--app-surface-soft);
+  color: var(--app-text-muted);
+}
+
+.section-tag-plain {
+  background: var(--app-surface);
+}
+
+.section-panel {
+  border: 1px solid var(--app-border);
+  background: var(--app-surface-soft);
+}
+
+.section-note {
+  border: 1px solid var(--app-border-strong);
+  background: var(--app-accent-strong);
+}
+
+.section-media-frame {
+  border: 1px solid var(--app-border);
+  background: var(--app-surface-strong);
+}
+
 .portfolio-theme .text-indigo-700,
 .portfolio-theme .text-sky-700 {
   color: var(--app-accent) !important;
@@ -225,4 +298,16 @@ samp,
   border-radius: 1rem;
   padding: 1rem 1.1rem;
 }
- 
+
+[data-theme='dark'] .section-card {
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(12px);
+}
+
+[data-theme='dark'] .section-card-hero {
+  background: linear-gradient(135deg, var(--app-surface-strong), var(--app-surface), rgba(94, 234, 212, 0.18));
+}
+
+[data-theme='dark'] .section-card-gradient {
+  background: linear-gradient(90deg, var(--app-surface), var(--app-surface-soft));
+}
