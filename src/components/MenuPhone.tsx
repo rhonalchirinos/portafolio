@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { MdOutlineMenu } from 'react-icons/md'
 import { FaDocker, FaFolderOpen, FaHome, FaPython } from 'react-icons/fa'
+import { SiRust } from 'react-icons/si'
 import { useLanguage } from '@/components/LanguageToggle'
 
 export default function MenuPhone() {
@@ -14,6 +15,7 @@ export default function MenuPhone() {
     { name: language === 'es' ? 'Inicio' : 'Home', href: '/', icon: <FaHome /> },
     { name: language === 'es' ? 'Proyectos' : 'Projects', href: '/#projects', icon: <FaFolderOpen /> },
     { name: 'Python', href: '/python', icon: <FaPython /> },
+    { name: 'Rust', href: '/rust', icon: <SiRust /> },
     { name: 'Docker', href: '/docker', icon: <FaDocker /> },
   ]
 

@@ -23,31 +23,11 @@ export default function PortioPage() {
       </div>
 
       <PortioHeroSection
-        heroLabel={content.hero.label}
-        heroTitle={content.hero.title}
-        heroDescription={content.hero.description}
-        heroBody={content.hero.body}
-        primaryActionLabel={content.hero.primaryActionLabel}
-        secondaryActionLabel={content.hero.secondaryActionLabel}
-        purposeLabel={content.hero.purposeLabel}
-        purposeDescription={content.hero.purposeDescription}
-        approachLabel={content.hero.approachLabel}
-        approachDescription={content.hero.approachDescription}
+        hero={content.hero}
       />
 
       <PortioBusinessSection
-        businessSectionLabel={content.business.sectionLabel}
-        businessSectionTitle={content.business.sectionTitle}
-        businessSectionDescription={content.business.sectionDescription}
-        productHighlights={content.business.productHighlights}
-        functionalFlow={content.business.functionalFlow}
-        valueLabel={content.business.valueLabel}
-        operationLabel={content.business.operationLabel}
-        operationTitle={content.business.operationTitle}
-        operationDescription={content.business.operationDescription}
-        impactLabel={content.business.impactLabel}
-        impactTitle={content.business.impactTitle}
-        impactParagraphs={content.business.impactParagraphs}
+        business={content.business}
       />
 
       <div className="relative my-14 md:my-20">
@@ -55,26 +35,7 @@ export default function PortioPage() {
       </div>
 
       <PortioTechnicalSection
-        technicalSectionLabel={content.technical.sectionLabel}
-        technicalSectionTitle={content.technical.sectionTitle}
-        technicalSectionDescription={content.technical.sectionDescription}
-        architectureFlow={content.technical.architectureFlow}
-        frontendStack={content.technical.frontendStack}
-        backendStack={content.technical.backendStack}
-        routeMap={content.technical.routeMap}
-        architectureLabel={content.technical.architectureLabel}
-        architectureTitle={content.technical.architectureTitle}
-        architectureDescription={content.technical.architectureDescription}
-        architectureDiagramLabel={content.technical.architectureDiagramLabel}
-        frontendLabel={content.technical.frontendLabel}
-        frontendTitle={content.technical.frontendTitle}
-        frontendDescription={content.technical.frontendDescription}
-        backendLabel={content.technical.backendLabel}
-        backendTitle={content.technical.backendTitle}
-        backendDescription={content.technical.backendDescription}
-        routeMapLabel={content.technical.routeMapLabel}
-        routeMapTitle={content.technical.routeMapTitle}
-        routeMapDescription={content.technical.routeMapDescription}
+        technical={content.technical}
       />
     </div>
   )

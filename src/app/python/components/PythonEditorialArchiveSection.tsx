@@ -3,11 +3,11 @@ import { FaArrowRight } from 'react-icons/fa'
 
 import { BaseSection } from '@/components/sections/BaseSection'
 import type { Language } from '@/i18n/translations'
-import type { PythonPublication } from '@/modules/python/domain/python-publication'
+import type { Publication } from '@/modules/python/domain/publication'
 
 type PythonEditorialArchiveSectionProps = {
   language: Language
-  publications: PythonPublication[]
+  publications: Publication[]
 }
 
 export function PythonEditorialArchiveSection({ language, publications }: PythonEditorialArchiveSectionProps) {

@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { FaPython, FaHome, FaDocker, FaFolderOpen } from 'react-icons/fa'
+import { SiRust } from 'react-icons/si'
 
 import { useLanguage } from '@/components/LanguageToggle'
 
@@ -12,6 +13,7 @@ export default function Menu() {
     { name: language === 'es' ? 'Inicio' : 'Home', href: '/', icon: <FaHome /> },
     { name: language === 'es' ? 'Proyectos' : 'Projects', href: '/#projects', icon: <FaFolderOpen /> },
     { name: 'Python', href: '/python', icon: <FaPython /> },
+    { name: 'Rust', href: '/rust', icon: <SiRust /> },
     { name: 'Docker', href: '/docker', icon: <FaDocker /> },
   ]
 
