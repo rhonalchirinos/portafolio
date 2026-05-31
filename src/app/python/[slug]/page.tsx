@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 
 import PythonPublicationContent from './PythonPublicationContent'
-import { pythonPublicationRepository } from '@/modules/python/infrastructure/in-memory-python-publication-repository'
+import { publicationRepository } from '@/modules/python/infrastructure/file-system-publication-repository'
 
 type Props = {
   params: Promise<{
@@ -11,14 +11,14 @@ type Props = {
 }
 
 export async function generateStaticParams() {
-  return pythonPublicationRepository.findAll().map((publication) => ({
+  return publicationRepository.findAll('es').map((publication) => ({
     slug: publication.slug,
   }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
-  const publication = pythonPublicationRepository.findBySlug(slug)
+  const publication = publicationRepository.findBySlug(slug, 'es')
 
   if (!publication) {
     return { title: 'Python' }
@@ -32,17 +32,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function PythonPublicationPage({ params }: Props) {
   const { slug } = await params
-  const publication = pythonPublicationRepository.findBySlug(slug)
+  const publicationEs = publicationRepository.findBySlug(slug, 'es')
+  const publicationEn = publicationRepository.findBySlug(slug, 'en')
 
-  if (!publication) {
+  if (!publicationEs || !publicationEn) {
     notFound()
   }
 
-  const publications = pythonPublicationRepository.findAll()
-  const currentIndex = publications.findIndex((item) => item.slug === publication.slug)
-  const nextPublication = publications[currentIndex + 1] ?? null
+  const spanishPublications = publicationRepository.findAll('es')
+  const currentIndex = spanishPublications.findIndex((item) => item.slug === publicationEs.slug)
+  const nextPublicationEs = spanishPublications[currentIndex + 1] ?? null
+  const nextPublicationEn = nextPublicationEs ? publicationRepository.findBySlug(nextPublicationEs.slug, 'en') : null
 
   return (
-    <PythonPublicationContent publication={publication} nextPublication={nextPublication} />
+    <PythonPublicationContent
+      publicationByLanguage={{ es: publicationEs, en: publicationEn }}
+      nextPublicationByLanguage={
+        nextPublicationEs && nextPublicationEn
+          ? { es: nextPublicationEs, en: nextPublicationEn }
+          : null
+      }
+    />
   )
 }

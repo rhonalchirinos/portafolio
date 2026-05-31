@@ -7,18 +7,18 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 import HighlightBlock from '@/components/HighlightBlock'
 import { useLanguage } from '@/components/LanguageToggle'
 import { BaseSection } from '@/components/sections/BaseSection'
-import type { PythonPublication } from '@/modules/python/domain/python-publication'
-import { localizePythonPublication } from '@/modules/python/infrastructure/python-publication-localization'
+import type { Language } from '@/i18n/translations'
+import type { Publication } from '@/modules/python/domain/publication'
 
 type Props = {
-  publication: PythonPublication
-  nextPublication: PythonPublication | null
+  publicationByLanguage: Record<Language, Publication>
+  nextPublicationByLanguage: Record<Language, Publication> | null
 }
 
-export default function PythonPublicationContent({ publication, nextPublication }: Props) {
+export default function PythonPublicationContent({ publicationByLanguage, nextPublicationByLanguage }: Props) {
   const { language } = useLanguage()
-  const localizedPublication = localizePythonPublication(publication, language)
-  const localizedNextPublication = nextPublication ? localizePythonPublication(nextPublication, language) : null
+  const publication = publicationByLanguage[language]
+  const nextPublication = nextPublicationByLanguage ? nextPublicationByLanguage[language] : null
 
   return (
     <article className="section-theme pb-20">
@@ -34,13 +34,13 @@ export default function PythonPublicationContent({ publication, nextPublication 
         <div className="mt-8 grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
             <p className="section-kicker text-sm font-semibold uppercase tracking-[0.25em]">
-              {localizedPublication.badge}
+              {publication.badge}
             </p>
-            <h1 className="section-title mt-4 text-4xl font-semibold md:text-5xl">{localizedPublication.title}</h1>
-            <p className="section-text mt-5 max-w-4xl text-lg leading-8">{localizedPublication.description}</p>
+            <h1 className="section-title mt-4 text-4xl font-semibold md:text-5xl">{publication.title}</h1>
+            <p className="section-text mt-5 max-w-4xl text-lg leading-8">{publication.description}</p>
 
             <div className="mt-6 flex flex-wrap gap-2">
-              {localizedPublication.topics.map((topic) => (
+              {publication.topics.map((topic) => (
                 <span
                   key={topic}
                   className="section-tag mono-badge rounded-full px-3 py-1 text-xs font-semibold uppercase"
@@ -51,14 +51,14 @@ export default function PythonPublicationContent({ publication, nextPublication 
             </div>
 
             <p className="section-muted mt-4 text-sm font-semibold uppercase tracking-[0.2em]">
-              {localizedPublication.readingTime}
+              {publication.readingTime}
             </p>
           </div>
 
           <div className="section-media-frame relative overflow-hidden rounded-[1.75rem] p-4">
             <Image
-              src={localizedPublication.image}
-              alt={localizedPublication.title}
+              src={publication.image}
+              alt={publication.title}
               width={1200}
               height={800}
               className="h-full w-full rounded-[1.25rem] object-cover"
@@ -68,7 +68,7 @@ export default function PythonPublicationContent({ publication, nextPublication 
       </BaseSection>
 
       <div className="mt-8 space-y-6">
-        {localizedPublication.sections.map((section) => (
+        {publication.sections.map((section) => (
           <BaseSection key={section.id}>
             <h2 className="section-title text-3xl font-semibold">{section.title}</h2>
 
@@ -111,15 +111,15 @@ export default function PythonPublicationContent({ publication, nextPublication 
         ))}
       </div>
 
-      {localizedNextPublication && (
+      {nextPublication && (
         <BaseSection className="mt-8" tone="gradient">
           <p className="section-kicker text-sm font-semibold uppercase tracking-[0.25em]">
             {language === 'es' ? 'Siguiente lectura' : 'Next read'}
           </p>
-          <h2 className="section-title mt-3 text-3xl font-semibold">{localizedNextPublication.title}</h2>
-          <p className="section-text mt-4 max-w-3xl text-base leading-8">{localizedNextPublication.excerpt}</p>
+          <h2 className="section-title mt-3 text-3xl font-semibold">{nextPublication.title}</h2>
+          <p className="section-text mt-4 max-w-3xl text-base leading-8">{nextPublication.excerpt}</p>
           <Link
-            href={`/python/${localizedNextPublication.slug}`}
+            href={`/python/${nextPublication.slug}`}
             className="clear-button mt-6 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition"
           >
             {language === 'es' ? 'Ir a la siguiente publicacion' : 'Go to the next article'}

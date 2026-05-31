@@ -7,7 +7,7 @@ import { FaArrowUpRightFromSquare, FaCertificate } from 'react-icons/fa6'
 
 import { portioDarkThemeStyle, portioLightThemeStyle } from '@/app/proyects/portio/components/portio-theme'
 import { useLanguage, useTheme } from '@/components/LanguageToggle'
-import { dockerExercises } from '@/data/data'
+import { dockerPublicationMetadata } from '@/modules/docker/content/publication-metadata'
 
 export default function Home() {
   const { language } = useLanguage()
@@ -106,37 +106,11 @@ export default function Home() {
     },
   ]
 
+  const dockerPublicationEntries = Object.entries(dockerPublicationMetadata[language]).sort(
+    ([, left], [, right]) => left.order - right.order,
+  )
+
   const projectArchive = [
-    {
-      title: language === 'es' ? 'API ligera en Docker' : 'Lightweight API in Docker',
-      description:
-        language === 'es'
-          ? 'Una API optimizada para ocupar menos de 20 MB usando multi-stage build, una imagen m\u00ednima y un flujo claro de construcci\u00f3n.'
-          : 'An API optimized to stay under 20 MB by using a multi-stage build, a minimal image, and a clear packaging flow.',
-      href: dockerExercises[0].devto,
-      github: dockerExercises[0].github,
-      stack: ['Docker', 'Go', 'Alpine'],
-    },
-    {
-      title: language === 'es' ? 'Cluster Docker Swarm de 3 nodos' : '3-node Docker Swarm Cluster',
-      description:
-        language === 'es'
-          ? 'Un ejercicio de orquestaci\u00f3n para entender nodos, coordinaci\u00f3n de servicios y operaci\u00f3n distribuida en contenedores.'
-          : 'An orchestration exercise to understand nodes, service coordination, and distributed container workloads.',
-      href: dockerExercises[2].devto,
-      github: dockerExercises[2].github,
-      stack: ['Docker Swarm', 'Cluster', 'Containers'],
-    },
-    {
-      title: language === 'es' ? 'Reverse proxy para microservicios' : 'Reverse proxy for microservices',
-      description:
-        language === 'es'
-          ? 'Configuraci\u00f3n de un proxy para enrutar multiples servicios y acercar la arquitectura a un escenario mas realista.'
-          : 'A proxy setup to route multiple services and move the architecture closer to a more realistic scenario.',
-      href: dockerExercises[3].devto,
-      github: dockerExercises[3].github,
-      stack: ['NGINX', 'Docker Compose', 'Microservices'],
-    },
     {
       title:
         language === 'es'
@@ -148,7 +122,15 @@ export default function Home() {
           : 'A long-form guide with the core content you need to study for an entry-level Python certification.',
       href: '/python',
       stack: ['Editorial', 'Python', 'PCEP'],
+      github: undefined,
     },
+    ...dockerPublicationEntries.map(([slug, publication]) => ({
+      title: publication.title,
+      description: publication.excerpt,
+      href: `/docker/${slug}`,
+      stack: publication.topics,
+      github: undefined,
+    })),
   ]
 
   return (

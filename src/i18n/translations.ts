@@ -32,6 +32,10 @@ export const translations = {
     seeDetail: 'Ver detalle',
     goToGitHub: 'Ir a GitHub',
     credlyProfile: 'Ver perfil en Credly',
+    backToRust: 'Volver a Rust',
+    importantNote: 'Nota importante',
+    nextRead: 'Siguiente lectura',
+    goToNextArticle: 'Ir a la siguiente publicacion',
   },
   en: {
     portfolio: 'Portfolio and technical journal',
@@ -66,6 +70,10 @@ export const translations = {
     seeDetail: 'See detail',
     goToGitHub: 'Go to GitHub',
     credlyProfile: 'View Credly profile',
+    backToRust: 'Back to Rust',
+    importantNote: 'Important note',
+    nextRead: 'Next read',
+    goToNextArticle: 'Go to the next article',
   },
 }
 

@@ -1,4 +1,4 @@
-export type PythonPublicationSection = {
+export type PublicationSection = {
   id: string
   title: string
   paragraphs?: string[]
@@ -11,7 +11,7 @@ export type PythonPublicationSection = {
   }
 }
 
-export type PythonPublication = {
+export type Publication = {
   slug: string
   order: number
   badge: string
@@ -21,5 +21,5 @@ export type PythonPublication = {
   readingTime: string
   image: string
   topics: string[]
-  sections: PythonPublicationSection[]
+  sections: PublicationSection[]
 }
