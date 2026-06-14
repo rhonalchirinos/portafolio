@@ -51,7 +51,7 @@ export default function RootLayout({
           <LanguageProvider>
             <main className="min-h-screen">
               <header className="sticky top-0 z-50 border-b border-[color:var(--header-border)] bg-[color:var(--header-surface)] backdrop-blur-xl">
-                <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5 lg:px-8">
+                <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 lg:px-8 lg:py-5">
                   <Link href="/" className="flex items-center gap-3">
                     <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[color:var(--header-border)] bg-[color:var(--header-chip)] text-sm font-bold text-[color:var(--header-chip-text)]">
                       RC
@@ -61,12 +61,12 @@ export default function RootLayout({
                       <p className="text-lg font-semibold text-[color:var(--header-text)]">Rhonal Chirinos</p>
                     </div>
                   </Link>
-                  <div className="relative">
-                    <MenuPhone />
-                  </div>
                   <div className="flex items-center gap-2">
                     <ThemeToggle />
                     <LanguageToggle />
+                    <div className="relative lg:hidden">
+                      <MenuPhone />
+                    </div>
                   </div>
                   <Menu />
                 </div>

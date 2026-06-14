@@ -15,7 +15,7 @@ export function DockerHeroSection({ language }: DockerHeroSectionProps) {
     <BaseSection tone="hero" padding="lg">
       <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <div className="section-badge px-4 py-2">
+          <div className="inline-flex items-center gap-3 rounded-full border border-[color:var(--app-border-strong)] bg-[color:var(--app-surface-strong)] px-4 py-2 text-[color:var(--app-accent)] shadow-sm">
             <FaDocker className="text-xl" />
             <span className="text-sm font-semibold uppercase tracking-[0.25em]">Docker</span>
           </div>

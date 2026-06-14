@@ -31,9 +31,9 @@ export default function Home() {
     ? 'absolute left-1/2 top-6 h-52 w-52 -translate-x-1/2 rounded-full bg-sky-300/20 blur-3xl'
     : 'absolute left-1/2 top-6 h-52 w-52 -translate-x-1/2 rounded-full bg-sky-200/40 blur-3xl'
   const portraitCardClassName = isDark
-    ? 'relative w-full max-w-sm rounded-[2rem] border border-slate-200 bg-[#101a2c] p-5 backdrop-blur'
-    : 'relative w-full max-w-sm rounded-[2rem] border border-slate-200 bg-white/85 p-5 backdrop-blur'
-  const portraitFrameClassName = isDark ? 'rounded-[1.5rem] bg-[#17233a] p-3' : 'rounded-[1.5rem] bg-slate-100 p-3'
+    ? 'relative w-full rounded-[1.75rem] border border-slate-200 bg-[#101a2c] p-4 backdrop-blur sm:max-w-sm sm:rounded-[2rem] sm:p-5'
+    : 'relative w-full rounded-[1.75rem] border border-slate-200 bg-white/85 p-4 backdrop-blur sm:max-w-sm sm:rounded-[2rem] sm:p-5'
+  const portraitFrameClassName = isDark ? 'rounded-[1.35rem] bg-[#17233a] p-3 sm:rounded-[1.5rem]' : 'rounded-[1.35rem] bg-slate-100 p-3 sm:rounded-[1.5rem]'
   const portraitMetaClassName = isDark ? 'mt-5 grid gap-3 text-sm text-slate-200' : 'mt-5 grid gap-3 text-sm text-slate-700'
   const featuredCardStyle = {
     ...(isDark ? portioDarkThemeStyle : portioLightThemeStyle),
@@ -136,7 +136,7 @@ export default function Home() {
   return (
     <div className="portfolio-theme pb-20 pt-8">
       <section className={heroSectionClassName}>
-        <div className="grid gap-10 px-8 py-10 md:px-12 lg:grid-cols-[1.4fr_0.9fr] lg:px-14 lg:py-14">
+        <div className="grid gap-10 px-5 py-8 sm:px-6 sm:py-10 md:px-12 lg:grid-cols-[1.4fr_0.9fr] lg:px-14 lg:py-14">
           <div className="relative z-10">
             <p className={heroEyebrowClassName}>
               {language === 'es' ? 'Portafolio y diario t\u00e9cnico' : 'Portfolio and technical journal'}
@@ -164,7 +164,7 @@ export default function Home() {
                 <FaArrowRight />
               </Link>
               <Link
-                href="/rhonalchirinos.pdf"
+                href="/rhonalchirinos.pdf?dl=1"
                 className="ghost-button inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition"
               >
                 {language === 'es' ? 'Descargar CV' : 'Download CV'}
@@ -191,7 +191,7 @@ export default function Home() {
                 LinkedIn
               </Link>
               <Link
-                href="/rhonalchirinos.pdf"
+                href="/rhonalchirinos.pdf?dl=1"
                 className="ghost-button inline-flex items-center gap-2 rounded-full px-4 py-2 transition"
               >
                 {language === 'es' ? 'Ver CV' : 'View resume'}
@@ -208,7 +208,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative flex items-end justify-center">
+          <div className="relative flex items-end justify-center lg:justify-end">
             <div className={portraitGlowClassName} />
             <div className={portraitCardClassName}>
               <div className={portraitFrameClassName}>
@@ -226,7 +226,7 @@ export default function Home() {
                   <p className="text-xs uppercase tracking-[0.25em] text-sky-700">
                     {language === 'es' ? 'Enfoque' : 'Focus'}
                   </p>
-                  <p className="mt-2 text-base font-medium">
+                  <p className="mt-2 text-sm font-medium leading-7 sm:text-base">
                     {language === 'es'
                       ? 'Backend, contenedores, automatizaci\u00f3n y aprendizaje aplicado.'
                       : 'Backend, containers, automation and applied learning.'}
@@ -236,7 +236,7 @@ export default function Home() {
                   <p className="text-xs uppercase tracking-[0.25em] text-sky-700">
                     {language === 'es' ? 'Enfoque' : 'Approach'}
                   </p>
-                  <p className="mt-2 text-base font-medium">
+                  <p className="mt-2 text-sm font-medium leading-7 sm:text-base">
                     {language === 'es'
                       ? 'Pr\u00e1ctica t\u00e9cnica, documentaci\u00f3n clara y soluciones orientadas a implementaci\u00f3n.'
                       : 'Technical practice, clear documentation and implementation-oriented solutions.'}
@@ -612,7 +612,7 @@ export default function Home() {
           </div>
           <div className="flex flex-wrap gap-3">
             <Link
-              href="/rhonalchirinos.pdf"
+              href="/rhonalchirinos.pdf?dl=1"
               className="clear-button inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition"
             >
               {language === 'es' ? 'Ver CV' : 'View resume'}
@@ -626,7 +626,7 @@ export default function Home() {
               {language === 'es' ? 'Ir a GitHub' : 'Go to GitHub'}
             </Link>
             <Link
-              href="/rhonalchirinos.pdf"
+              href="/rhonalchirinos.pdf?dl=1"
               className="ghost-button inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition"
             >
               {language === 'es' ? 'Descargar CV' : 'Download CV'}
