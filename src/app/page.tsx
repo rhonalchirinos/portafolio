@@ -18,23 +18,33 @@ export default function Home() {
     ? 'overflow-hidden rounded-[2rem] border border-slate-200 bg-[radial-gradient(circle_at_top_left,rgba(125,211,252,0.18),transparent_30%),linear-gradient(135deg,#0f1b2f_0%,#101a2c_48%,#14233d_100%)] text-slate-900 shadow-xl'
     : 'overflow-hidden rounded-[2rem] border border-slate-200 bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,0.18),transparent_28%),radial-gradient(circle_at_88%_18%,rgba(191,219,254,0.38),transparent_24%),linear-gradient(135deg,#ffffff_0%,#f8fbff_48%,#eef5ff_100%)] text-slate-900 shadow-xl'
 
-  const heroEyebrowClassName = isDark ? 'text-sm font-semibold uppercase tracking-[0.3em] text-sky-300' : 'text-sm font-semibold uppercase tracking-[0.3em] text-sky-700'
+  const heroEyebrowClassName = isDark
+    ? 'text-sm font-semibold uppercase tracking-[0.3em] text-sky-300'
+    : 'text-sm font-semibold uppercase tracking-[0.3em] text-sky-700'
   const heroTitleClassName = isDark
     ? 'mt-5 max-w-3xl text-4xl font-semibold leading-tight text-balance text-white md:text-5xl'
     : 'mt-5 max-w-3xl text-4xl font-semibold leading-tight text-balance text-slate-900 md:text-5xl'
-  const heroSubtitleClassName = isDark ? 'mt-3 text-lg font-medium text-slate-200 md:text-xl' : 'mt-3 text-lg font-medium text-slate-700 md:text-xl'
+  const heroSubtitleClassName = isDark
+    ? 'mt-3 text-lg font-medium text-slate-200 md:text-xl'
+    : 'mt-3 text-lg font-medium text-slate-700 md:text-xl'
   const heroBodyClassName = isDark
     ? 'mt-6 max-w-2xl text-base leading-8 text-slate-300 md:text-lg'
     : 'mt-6 max-w-2xl text-base leading-8 text-slate-600 md:text-lg'
-  const heroLinksClassName = isDark ? 'mt-10 flex flex-wrap gap-3 text-sm text-slate-300' : 'mt-10 flex flex-wrap gap-3 text-sm text-slate-600'
+  const heroLinksClassName = isDark
+    ? 'mt-10 flex flex-wrap gap-3 text-sm text-slate-300'
+    : 'mt-10 flex flex-wrap gap-3 text-sm text-slate-600'
   const portraitGlowClassName = isDark
     ? 'absolute left-1/2 top-6 h-52 w-52 -translate-x-1/2 rounded-full bg-sky-300/20 blur-3xl'
     : 'absolute left-1/2 top-6 h-52 w-52 -translate-x-1/2 rounded-full bg-sky-200/40 blur-3xl'
   const portraitCardClassName = isDark
     ? 'relative w-full rounded-[1.75rem] border border-slate-200 bg-[#101a2c] p-4 backdrop-blur sm:max-w-sm sm:rounded-[2rem] sm:p-5'
     : 'relative w-full rounded-[1.75rem] border border-slate-200 bg-white/85 p-4 backdrop-blur sm:max-w-sm sm:rounded-[2rem] sm:p-5'
-  const portraitFrameClassName = isDark ? 'rounded-[1.35rem] bg-[#17233a] p-3 sm:rounded-[1.5rem]' : 'rounded-[1.35rem] bg-slate-100 p-3 sm:rounded-[1.5rem]'
-  const portraitMetaClassName = isDark ? 'mt-5 grid gap-3 text-sm text-slate-200' : 'mt-5 grid gap-3 text-sm text-slate-700'
+  const portraitFrameClassName = isDark
+    ? 'rounded-[1.35rem] bg-[#17233a] p-3 sm:rounded-[1.5rem]'
+    : 'rounded-[1.35rem] bg-slate-100 p-3 sm:rounded-[1.5rem]'
+  const portraitMetaClassName = isDark
+    ? 'mt-5 grid gap-3 text-sm text-slate-200'
+    : 'mt-5 grid gap-3 text-sm text-slate-700'
   const featuredCardStyle = {
     ...(isDark ? portioDarkThemeStyle : portioLightThemeStyle),
     borderColor: isDark ? 'var(--portio-secondary)' : 'rgba(99, 102, 241, 0.18)',
@@ -107,7 +117,7 @@ export default function Home() {
   ]
 
   const dockerPublicationEntries = Object.entries(dockerPublicationMetadata[language]).sort(
-    ([, left], [, right]) => left.order - right.order,
+    ([, left], [, right]) => left.order - right.order
   )
 
   const projectArchive = [
@@ -141,9 +151,7 @@ export default function Home() {
             <p className={heroEyebrowClassName}>
               {language === 'es' ? 'Portafolio y diario t\u00e9cnico' : 'Portfolio and technical journal'}
             </p>
-            <h1 className={heroTitleClassName}>
-              Rhonal Chirinos
-            </h1>
+            <h1 className={heroTitleClassName}>Rhonal Chirinos</h1>
             <p className={heroSubtitleClassName}>
               {language === 'es'
                 ? 'Senior Backend Engineer especializado en microservicios, integraciones, AWS y sistemas escalables.'
@@ -164,7 +172,7 @@ export default function Home() {
                 <FaArrowRight />
               </Link>
               <Link
-                href="/rhonalchirinos.pdf?dl=1"
+                href={`/api/cv.pdf?lang=${language}&download=1`}
                 className="ghost-button inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition"
               >
                 {language === 'es' ? 'Descargar CV' : 'Download CV'}
@@ -191,7 +199,7 @@ export default function Home() {
                 LinkedIn
               </Link>
               <Link
-                href="/rhonalchirinos.pdf?dl=1"
+                href="/cv"
                 className="ghost-button inline-flex items-center gap-2 rounded-full px-4 py-2 transition"
               >
                 {language === 'es' ? 'Ver CV' : 'View resume'}
@@ -325,10 +333,7 @@ export default function Home() {
                 </div>
 
                 <div className="grid gap-4">
-                  <div
-                    className="rounded-[1.5rem] border p-5"
-                    style={featuredPanelStyle}
-                  >
+                  <div className="rounded-[1.5rem] border p-5" style={featuredPanelStyle}>
                     <p
                       className="text-xs font-semibold uppercase tracking-[0.2em]"
                       style={{ color: featuredAccentColor }}
@@ -341,10 +346,7 @@ export default function Home() {
                         : 'React, TypeScript, Vite, TanStack Router, Zustand, Recharts, i18next, Amplify, and Tailwind CSS.'}
                     </p>
                   </div>
-                  <div
-                    className="rounded-[1.5rem] border p-5"
-                    style={featuredPanelStyle}
-                  >
+                  <div className="rounded-[1.5rem] border p-5" style={featuredPanelStyle}>
                     <p
                       className="text-xs font-semibold uppercase tracking-[0.2em]"
                       style={{ color: featuredAccentColor }}
@@ -601,9 +603,9 @@ export default function Home() {
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-indigo-700">
               {language === 'es' ? 'Siguiente paso' : 'Next step'}
             </p>
-          <h2 className="mt-3 text-3xl font-semibold text-slate-900">
+            <h2 className="mt-3 text-3xl font-semibold text-slate-900">
               {language === 'es' ? 'Sigamos la conversaci\u00f3n' : "Let's keep the conversation going"}
-          </h2>
+            </h2>
             <p className="mt-4 text-lg leading-8 text-slate-600">
               {language === 'es'
                 ? 'Si quieres ver m\u00e1s detalle sobre mi experiencia, mis proyectos o mi forma de trabajar, puedes revisar mi perfil, explorar mis repositorios o descargar mi CV.'
@@ -612,7 +614,7 @@ export default function Home() {
           </div>
           <div className="flex flex-wrap gap-3">
             <Link
-              href="/rhonalchirinos.pdf?dl=1"
+              href="/cv"
               className="clear-button inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition"
             >
               {language === 'es' ? 'Ver CV' : 'View resume'}
@@ -626,7 +628,7 @@ export default function Home() {
               {language === 'es' ? 'Ir a GitHub' : 'Go to GitHub'}
             </Link>
             <Link
-              href="/rhonalchirinos.pdf?dl=1"
+              href={`/api/cv.pdf?lang=${language}&download=1`}
               className="ghost-button inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition"
             >
               {language === 'es' ? 'Descargar CV' : 'Download CV'}
