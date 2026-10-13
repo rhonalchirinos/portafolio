@@ -82,7 +82,7 @@ export function CvPdfDocument({ cv }: { cv: Cv }) {
             <Text style={styles.credential}>
               {cv.featuredCredential.label} ·{' '}
               <Link src={cv.featuredCredential.url} style={styles.link}>
-                Ver credencial
+                {cv.credentialActionLabel}
               </Link>
             </Text>
           )}
@@ -99,7 +99,7 @@ export function CvPdfDocument({ cv }: { cv: Cv }) {
           )}
           {cv.links.length > 0 && (
             <Text style={styles.links}>
-              <Text style={styles.linksLabel}>Enlaces: </Text>
+              <Text style={styles.linksLabel}>{cv.linksLabel}: </Text>
               {cv.links.map((link, index) => (
                 <Link key={link.url} src={link.url} style={styles.link}>
                   {index > 0 ? ` | ${link.label}` : link.label}

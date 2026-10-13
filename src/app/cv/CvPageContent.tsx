@@ -76,14 +76,14 @@ export function CvPageContent({ cvByLanguage }: { cvByLanguage: Record<'es' | 'e
                 rel="noreferrer"
                 className="underline underline-offset-4"
               >
-                {language === 'es' ? 'Ver credencial' : 'View credential'}
+                {cv.credentialActionLabel}
               </a>
             </p>
           )}
           <div className="section-text mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm">
             {cv.email && <span>{cv.email}</span>}
             {cv.location && <span>{cv.location}</span>}
-            {cv.links.length > 0 && <span>Enlaces:</span>}
+            {cv.links.length > 0 && <span>{cv.linksLabel}:</span>}
             {cv.links.map((link) => (
               <a
                 key={link.url}

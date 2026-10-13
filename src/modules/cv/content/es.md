@@ -3,6 +3,8 @@ name: Rhonal A. Chirinos Rodriguez
 headline: Senior Backend Engineer | TypeScript · Node.js · NestJS
 location: Buenos Aires, Argentina
 email: rhonalchirinos@gmail.com
+linksLabel: Enlaces
+credentialActionLabel: Ver credencial
 featuredCredential:
   label: AWS Certified Cloud Practitioner
   url: https://www.credly.com/badges/cdeaf800-c8c5-489e-bad0-6bec8b9383fd/public_url

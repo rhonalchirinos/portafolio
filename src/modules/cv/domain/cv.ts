@@ -23,6 +23,8 @@ export type Cv = {
   headline: string
   email?: string
   location?: string
+  linksLabel: string
+  credentialActionLabel: string
   links: CvLink[]
   featuredCredential?: CvLink
   summary: string[]

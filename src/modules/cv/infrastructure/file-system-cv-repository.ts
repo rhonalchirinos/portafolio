@@ -11,6 +11,8 @@ type FrontMatter = {
   headline?: unknown
   email?: unknown
   location?: unknown
+  linksLabel?: unknown
+  credentialActionLabel?: unknown
   links?: unknown
   featuredCredential?: unknown
 }
@@ -140,6 +142,8 @@ function parseMarkdown(source: string): Cv {
     headline: requiredString(frontMatter.headline, 'headline'),
     email: optionalString(frontMatter.email),
     location: optionalString(frontMatter.location),
+    linksLabel: requiredString(frontMatter.linksLabel, 'linksLabel'),
+    credentialActionLabel: requiredString(frontMatter.credentialActionLabel, 'credentialActionLabel'),
     links: parseLinks(frontMatter.links),
     featuredCredential: parseOptionalLink(frontMatter.featuredCredential),
     summary,
