@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
   credential: { color: '#2563EB', marginTop: 5 },
   contact: { color: '#596579', marginTop: 8 },
   links: { marginTop: 4 },
+  linksLabel: { color: '#596579' },
   section: { marginBottom: 14 },
   sectionTitle: { color: '#16324B', fontSize: 12.5, fontWeight: 700, marginBottom: 6 },
   paragraph: { marginBottom: 4, textAlign: 'justify' },
@@ -71,8 +72,6 @@ function renderTextWithLinks(text: string) {
 }
 
 export function CvPdfDocument({ cv }: { cv: Cv }) {
-  const contact = [cv.email, cv.location].filter(Boolean).join(' | ')
-
   return (
     <Document title={`${cv.name} - CV`} author={cv.name}>
       <Page size="A4" style={styles.page}>
@@ -87,9 +86,20 @@ export function CvPdfDocument({ cv }: { cv: Cv }) {
               </Link>
             </Text>
           )}
-          {contact && <Text style={styles.contact}>{contact}</Text>}
+          {(cv.location || cv.email) && (
+            <Text style={styles.contact}>
+              {cv.location}
+              {cv.location && cv.email && ' | '}
+              {cv.email && (
+                <Link src={`mailto:${cv.email}`} style={styles.link}>
+                  {cv.email}
+                </Link>
+              )}
+            </Text>
+          )}
           {cv.links.length > 0 && (
             <Text style={styles.links}>
+              <Text style={styles.linksLabel}>Enlaces: </Text>
               {cv.links.map((link, index) => (
                 <Link key={link.url} src={link.url} style={styles.link}>
                   {index > 0 ? ` | ${link.label}` : link.label}

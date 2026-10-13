@@ -2,11 +2,11 @@
 name: Rhonal Chirinos
 headline: Senior Backend Engineer
 links:
-  - label: GitHub
+  - label: github.com/rhonalchirinos
     url: https://github.com/rhonalchirinos
-  - label: LinkedIn
+  - label: linkedin.com/in/rhonal
     url: https://www.linkedin.com/in/rhonal/
-  - label: Credly
+  - label: credly.com/users/rhonalchirinos
     url: https://www.credly.com/users/rhonalchirinos
 ---
 

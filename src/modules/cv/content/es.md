@@ -7,11 +7,11 @@ featuredCredential:
   label: AWS Certified Cloud Practitioner
   url: https://www.credly.com/badges/cdeaf800-c8c5-489e-bad0-6bec8b9383fd/public_url
 links:
-  - label: LinkedIn
+  - label: linkedin.com/in/rhonal
     url: https://www.linkedin.com/in/rhonal/
-  - label: GitHub
+  - label: github.com/rhonalchirinos
     url: https://github.com/rhonalchirinos
-  - label: Portfolio
+  - label: rhodeveloper.com
     url: https://rhodeveloper.com
 ---
 
@@ -29,7 +29,7 @@ Experiencia desarrollando soluciones desde cero, modernizando sistemas en produc
 
 ## Experiencia laboral
 
-### Senior Backend Engineer | Bidcom - Argentina | Febrero de 2025 - Presente
+### Senior Backend Engineer | Bidcom - Argentina | Febrero 2025 – Actualidad
 
 Desarrollo de microservicios e integraciones para las operaciones de Argentina y México.
 
@@ -40,7 +40,7 @@ Desarrollo de microservicios e integraciones para las operaciones de Argentina y
 - Para la expansión a **México**, desarrollé procesos programados en microservicios con **Node.js**, utilizando **APIs REST y JSON-RPC** para incorporar órdenes a **Odoo** y sincronizar datos y estados, sin carga manual de pedidos por parte del equipo operativo.
 - Contribuí a adaptar integraciones de marketplaces, desarrollar módulos de **Odoo en Python** con rutas personalizadas e integrar un proveedor de **última milla** para automatizar el envío de órdenes y sincronizar estados de entrega.
 
-### Backend Developer | Antártida - Argentina | Marzo de 2023 - Febrero de 2025
+### Backend Developer | Antártida - Argentina | Marzo 2023 – Febrero 2025
 
 - Diseñé la base de datos y desarrollé el backend de **Go Padel** con **NestJS, PostgreSQL y Redis**, desde su construcción hasta producción, para gestionar inscripciones a torneos, pagos, calendario de partidos, resultados y ranking de jugadores.
 - Implementé pagos con **Mercado Pago** y una pasarela adicional, códigos de seguridad para el inicio de sesión y procesamiento con **BullMQ**. Definí los flujos de integración y orienté técnicamente al equipo frontend.
@@ -48,36 +48,36 @@ Desarrollo de microservicios e integraciones para las operaciones de Argentina y
 - Implementé tareas asíncronas con **Celery** y tickets con **QR de validez temporal**, regenerados desde una aplicación móvil incluso sin conexión, para dificultar la reutilización de códigos copiados.
 - Participé en el despliegue de la plataforma de entradas en **Google Cloud Run**; permaneció operativa en producción durante **más de un año**.
 
-### Desarrollador Backend | Proyecto colaborativo para Vivo Conecta - Colombia · Remoto | Octubre de 2021 - Noviembre de 2024
+### Desarrollador Backend | Proyecto colaborativo para Vivo Conecta - Colombia · Remoto | Octubre 2021 – Noviembre 2024
 
 Colaboración por proyecto, en paralelo al empleo principal.
 
 - Desarrollé funcionalidades con **PHP, Laravel, MySQL y Node.js**, integradas con interfaces React.
 - Participé en refactorización, revisión de código y despliegues utilizando **AWS y AWS Lambda**.
 
-### Full Stack Developer | Conexa - Argentina | Octubre de 2019 - Enero de 2023
+### Full Stack Developer | Conexa - Argentina | Octubre 2019 – Enero 2023
 
 - Fui responsable del desarrollo de integraciones de delivery con **PHP y Laravel** para clientes como **Grupo Delosi en Perú y Telepizza en España y Portugal**.
 - Centralicé la gestión de apertura y horarios de restaurantes, menús, órdenes y seguimiento de entregas de **Glovo, PedidosYa y Rappi**, evitando operar cada plataforma por separado.
 - Participé en la separación del monolito en **microservicios** y la distribución del procesamiento mediante colas gestionadas con **Laravel Horizon**, resolviendo problemas de lentitud, caídas y demoras en la actualización de órdenes.
 - Implementé observabilidad y notificaciones de fallos. En otros proyectos, desarrollé plugins de envíos y pagos para **WooCommerce y PrestaShop**, y funcionalidades con **Vue.js y React**.
 
-### Desarrollador de Software | Grupo Zaga System - Venezuela | Septiembre de 2018 - Octubre de 2019
+### Desarrollador de Software | Grupo Zaga System - Venezuela | Septiembre 2018 – Octubre 2019
 
 - Ejercí liderazgo técnico y desarrollé aplicaciones con **PHP, Laravel, Node.js, Express e Ionic**.
 - Planifiqué proyectos bajo **Scrum** e implementé procesamiento con **Redis Queue**, utilizando GitLab y despliegues en GoDaddy.
 
 ## Educación
 
-### Ingeniero en Informática — Título obtenido | Universidad Centro Occidental Lisandro Alvarado | 2013 - 2018
+### Ingeniero en Informática — Título obtenido | Universidad Centro Occidental Lisandro Alvarado | 2013 – 2018
 
-### Analista de Sistemas | Universidad Centro Occidental Lisandro Alvarado | 2008 - 2012
+### Analista de Sistemas | Universidad Centro Occidental Lisandro Alvarado | 2008 – 2012
 
 Segundo mejor promedio de la promoción.
 
 ## Certificaciones y formación
 
-### AWS Certified Cloud Practitioner | Amazon Web Services | Abril de 2026 - Abril de 2029
+### AWS Certified Cloud Practitioner | Amazon Web Services | Abril 2026 – Abril 2029
 
 [Ver credencial](https://www.credly.com/badges/cdeaf800-c8c5-489e-bad0-6bec8b9383fd/public_url)
 
